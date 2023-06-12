@@ -29,7 +29,10 @@
         max-width: 800px;
         margin: 0 auto;
       }
-      a:visited {
+      a,
+      a:visited,
+      a:link,
+      a:active {
         color: #0074b0;
       }
     </style>
@@ -48,6 +51,12 @@
         }
         .Hoitopolku * {
           box-sizing: border-box;
+        }
+        .Hoitopolku a,
+        .Hoitopolku a:visited,
+        .Hoitopolku a:link,
+        .Hoitopolku a:active {
+          color: #0074b0;
         }
         h1 {
           color: var(--rose);
