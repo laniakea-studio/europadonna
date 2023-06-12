@@ -105,6 +105,9 @@
           align-items: center;
           text-decoration: none;
         }
+        ul.indexMenu li a:hover {
+          opacity: 0.85;
+        }
         ul.indexMenu li a span {
           text-decoration: underline;
         }
@@ -261,18 +264,25 @@
             font-size: 25px;
             line-height: 33px;
           }
+          .Box h4 {
+            font-size: 25px;
+          }
         }
         .Box h4 {
           margin-top: 40px;
           margin-bottom: 20px;
-          font-size: 25px;
+          font-size: 21px;
+          color: var(--blue-dark);
         }
         .Box > p {
-          font-size: 19px;
+          font-size: 16px;
+          line-height: 24px;
           margin-top: 0;
         }
         @media (min-width: 768px) {
           .Box > p {
+            font-size: 19px;
+            line-height: 28px;
             padding-right: 40px;
           }
         }
@@ -286,6 +296,13 @@
         }
         a.BoxLink svg {
           margin-right: 10px;
+          transition: all 0.2s;
+        }
+        a.BoxLink:hover {
+          opacity: 0.9;
+        }
+        a.BoxLink:hover svg {
+          transform: translateX(5px);
         }
         .MuuSisältö {
           margin-top: 40px;
@@ -336,15 +353,26 @@
             font-size: 25px;
             line-height: 33px;
           }
+          .MuuSisältö h4 {
+            font-size: 25px;
+          }
         }
         .MuuSisältö h4 {
           margin-top: 40px;
           margin-bottom: 20px;
-          font-size: 25px;
+          font-size: 21px;
+          color: var(--blue-dark);
         }
         .MuuSisältö > p {
-          font-size: 19px;
+          font-size: 16px;
+          line-height: 24px;
           margin-top: 0;
+        }
+        @media (min-width: 768px) {
+          .MuuSisältö > p {
+            font-size: 19px;
+            line-height: 28px;
+          }
         }
       </style>
       <div>
@@ -672,7 +700,9 @@
           tilanne.
         </p>
 
-        <a class="BoxLink" href=""
+        <a
+          class="BoxLink"
+          href="https://tunnerintasi.fi/rintojen-omatarkkailu/tietoa-rintasyovasta/"
           ><svg
             width="26"
             height="16"
@@ -685,7 +715,7 @@
               fill="#0074B0"
             />
           </svg>
-          X Tunne Rintasi: Rintasyövän oireet
+          Tunne Rintasi: Rintasyövän oireet
         </a>
       </div>
       <!-- 2. -->
@@ -779,7 +809,9 @@
           kaikkea ei tule edes ajatelleeksi.
         </p>
 
-        <a class="BoxLink" href=""
+        <a
+          class="BoxLink"
+          href="https://syopa-alueelliset.s3.eu-west-1.amazonaws.com/sites/275/2020/03/17154052/Tukea-rintasy%C3%B6p%C3%A4potilaan-l%C3%A4%C3%A4k%C3%A4rik%C3%A4ynneille-A4.pdf"
           ><svg
             width="26"
             height="16"
@@ -792,7 +824,7 @@
               fill="#0074B0"
             />
           </svg>
-          X Tukilista lääkärikäynneille
+          Tukilista lääkärikäynneille
         </a>
       </div>
       <!-- 3 -->
@@ -915,7 +947,7 @@
           tässä vaikeassa tilanteessa.
         </p>
 
-        <a class="BoxLink" href=""
+        <a class="BoxLink" href="https://www.europadonna.fi/vertaistuki/"
           ><svg
             width="26"
             height="16"
@@ -928,7 +960,7 @@
               fill="#0074B0"
             />
           </svg>
-          X Tukea ja yhteystiedot tuen hakemiseen
+          Tukea ja yhteystiedot tuen hakemiseen
         </a>
       </div>
       <!-- 4 -->
@@ -2094,7 +2126,11 @@
           </svg>
           Lääkehoito
         </a>
-        <a class="BoxLink" href="" target="_blank" rel="noopener noreferrer"
+        <a
+          class="BoxLink"
+          href="https://www.europadonna.fi/vertaistuki/"
+          target="_blank"
+          rel="noopener noreferrer"
           ><svg
             width="26"
             height="16"
@@ -2107,7 +2143,7 @@
               fill="#0074B0"
             />
           </svg>
-          X Vertaistuki
+          Vertaistuki
         </a>
       </div>
     </article>
