@@ -1,0 +1,2106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My Website</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Neuton&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #f5f5f5;
+        font-family: "Cabin", sans-serif;
+        font-weight: 400;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+      }
+      article {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      a:visited {
+        color: #0074b0;
+      }
+    </style>
+  </head>
+  <body>
+    <article class="Hoitopolku">
+      <style>
+        :root {
+          --blue: #0074b0;
+          --blue-light: #c9edff;
+          --yellow: #ffe682;
+          --pink: #fad4dc;
+          --rose: #f9cfc7;
+          --blue-dark: #1b3350;
+          --black: #000000;
+        }
+        .Hoitopolku * {
+          box-sizing: border-box;
+        }
+        h1 {
+          color: var(--rose);
+        }
+        h2 {
+          font-size: 32px;
+          color: var(--blue-dark);
+          margin-top: 30px;
+          margin-bottom: 15px;
+        }
+        @media (min-width: 768px) {
+          h2 {
+            font-size: 46px;
+          }
+        }
+        h3 {
+          color: var(--blue-dark);
+          margin-top: 30px;
+          margin-bottom: 15px;
+        }
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+        }
+        .indexMenuWrap {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          margin-bottom: 40px;
+        }
+        ul.indexMenu {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          flex: 1;
+          padding-right: 20px;
+          margin: 0;
+          min-width: 300px;
+        }
+        ul.indexMenu li {
+          width: 100%;
+        }
+        ul.indexMenu li a {
+          padding: 12px 0;
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+        }
+        ul.indexMenu li a span {
+          text-decoration: underline;
+        }
+        li a .pallo {
+          margin-right: 14px;
+          background-color: var(--blue);
+          border-radius: 50%;
+          width: 33px;
+          min-width: 33px;
+          height: 33px;
+          color: var(--blue);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          font-size: 17px;
+          font-weight: 600;
+          letter-spacing: -0.05em;
+          background: var(--yellow);
+          line-height: 1;
+        }
+        ul.indexMenu:first-child li:nth-child(odd) a .pallo {
+          background: var(--rose) !important;
+        }
+        ul.indexMenu:last-child li:nth-child(even) a .pallo {
+          background: var(--rose) !important;
+        }
+        ul.indexMenu li a .pallo.bg-light-blue {
+          background: var(--blue-light) !important;
+        }
+        ul.indexMenu:first-child li:nth-child(odd) a .pallo.bg-light-blue {
+          background: var(--blue-light) !important;
+        }
+        ul.indexMenu:last-child li:nth-child(even) a .pallo.bg-light-blue {
+          background: var(--blue-light) !important;
+        }
+
+        .Box {
+          padding-top: 40px;
+          padding-bottom: 60px;
+          padding-left: 32px;
+          padding-right: 20px;
+          margin-bottom: 12px;
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+          width: 100%;
+          position: relative;
+          background-color: var(--yellow);
+        }
+        @media (min-width: 768px) {
+          .Box {
+            padding-left: 60px;
+          }
+        }
+        .Box::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          width: 12px;
+          height: 100%;
+          background-color: var(--pink);
+        }
+        .Box:nth-child(odd) {
+          background-color: var(--rose);
+        }
+        .Box:nth-child(odd):after {
+          background-color: var(--yellow);
+        }
+        .Box header {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          flex-wrap: wrap;
+          margin-bottom: 20px;
+        }
+        @media (min-width: 768px) {
+          .Box header {
+            flex-direction: row;
+          }
+        }
+
+        .Box header h3 {
+          margin-top: 10px;
+          margin-bottom: 10px;
+          margin-left: 0;
+          font-size: 24px;
+          max-width: 100%;
+          line-height: 32px;
+          font-weight: 600;
+          text-align: center;
+        }
+        @media (min-width: 768px) {
+          .Box header h3 {
+            margin-left: 20px;
+            font-size: 33px;
+            line-height: 43px;
+            text-align: left;
+            max-width: 80%;
+          }
+        }
+        .Box header span {
+          margin-left: auto;
+          align-self: flex-start;
+          position: absolute;
+          top: 20px;
+          right: 20px;
+        }
+
+        .Box blockquote {
+          display: flex;
+          margin: 20px 0 40px;
+        }
+        @media (min-width: 768px) {
+          .Box blockquote {
+            padding-right: 40px;
+          }
+        }
+        .Box blockquote svg {
+          margin-bottom: 20px;
+        }
+        .Box blockquote .vertical-line {
+          display: flex;
+          flex: 1 1 0;
+          width: 2px;
+          background-color: var(--blue);
+        }
+        .Box blockquote div:first-child {
+          width: 80px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .Box blockquote > div:last-child {
+          padding-left: 15px;
+        }
+        @media (min-width: 768px) {
+          .Box blockquote > div:last-child {
+            padding-left: 30px;
+          }
+        }
+        .Box blockquote p {
+          font-size: 20px;
+          font-style: italic;
+          font-weight: 400;
+          line-height: 28px;
+          letter-spacing: -0.05em;
+          margin-top: 0;
+        }
+        @media (min-width: 768px) {
+          .Box blockquote p {
+            font-size: 25px;
+            line-height: 33px;
+          }
+        }
+        .Box h4 {
+          margin-top: 40px;
+          margin-bottom: 20px;
+          font-size: 25px;
+        }
+        .Box > p {
+          font-size: 19px;
+          margin-top: 0;
+        }
+        @media (min-width: 768px) {
+          .Box > p {
+            padding-right: 40px;
+          }
+        }
+        a.BoxLink {
+          display: block;
+          color: var(--blue);
+          font-size: 21px;
+          text-decoration: none;
+          margin-top: 0px;
+          margin-bottom: 20px;
+        }
+        a.BoxLink svg {
+          margin-right: 10px;
+        }
+        .MuuSisältö {
+          margin-top: 40px;
+          margin-bottom: 40px;
+        }
+        .MuuSisältö blockquote {
+          display: flex;
+          margin: 20px 0 40px;
+        }
+        @media (min-width: 768px) {
+          .MuuSisältö blockquote {
+            padding-right: 40px;
+          }
+        }
+        .MuuSisältö blockquote svg {
+          margin-bottom: 20px;
+        }
+        .MuuSisältö blockquote .vertical-line {
+          display: flex;
+          flex: 1 1 0;
+          width: 2px;
+          background-color: var(--blue);
+        }
+        .MuuSisältö blockquote div:first-child {
+          width: 80px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .MuuSisältö blockquote > div:last-child {
+          padding-left: 15px;
+        }
+        @media (min-width: 768px) {
+          .MuuSisältö blockquote > div:last-child {
+            padding-left: 30px;
+          }
+        }
+        .MuuSisältö blockquote p {
+          font-size: 20px;
+          font-style: italic;
+          font-weight: 400;
+          line-height: 28px;
+          letter-spacing: -0.05em;
+          margin-top: 0;
+        }
+        @media (min-width: 768px) {
+          .MuuSisältö blockquote p {
+            font-size: 25px;
+            line-height: 33px;
+          }
+        }
+        .MuuSisältö h4 {
+          margin-top: 40px;
+          margin-bottom: 20px;
+          font-size: 25px;
+        }
+        .MuuSisältö > p {
+          font-size: 19px;
+          margin-top: 0;
+        }
+      </style>
+      <div>
+        <p>
+          Kun rintasyöpädiagnoosi on varmistunut, alkaa hoitopolku, jolla
+          tarkoitetaan sairauden hoitoon liittyviä vaiheita. Diagnoosin jälkeen
+          hoitopolku etenee yleensä vauhdilla. On kuitenkin hyvä tiedostaa, että
+          rintasyöpä ei ole kaikilla samanlainen, hoidot suunnitellaan
+          jokaiselle yksilöllisesti rintasyövän koon, tyypin ja levinneisyyden
+          mukaan, minkä vuoksi polun vaiheet voivat vaihdella. Tältä sivulta
+          löydät kuvauksen rintasyövän hoitopolun eri vaiheista ja siihen
+          liittyvistä teemoista, sekä kokemuksista liittyen rintasyövän eri
+          vaiheisiin. 
+        </p>
+        <p>
+          Vaikeiden ja ahdistavienkin ajatusten keskellä voit toivottavasti
+          saada lohtua siitä, että Suomessa saat sairauteesi maailman
+          huippuluokan hoitoa. Hoitotulokset ovat koko ajan parempia, myös
+          edenneeseen sairauteen. Jos sinulla tai läheiselläsi on todettu
+          rintasyöpä, mielen myllerrys on hyvin tavallista.  Sinun ei tarvitse
+          jäädä ajatustesi kanssa yksin, tarjolla on sekä ammattilaisten että
+          vertaisten tukea.
+        </p>
+      </div>
+      <h3>Hoitopolun vaiheet</h3>
+      <div class="indexMenuWrap">
+        <ul class="indexMenu">
+          <li>
+            <a href="#epäily-rintasyövästä">
+              <div class="pallo">1</div>
+              <span>Epäily rintasyövästä</span>
+            </a>
+          </li>
+          <li>
+            <a href="#lääkärin-vastaanotto">
+              <div class="pallo">2</div>
+              <span>Lääkärin vastaanotto, tutkimukset ja näytteiden otto</span>
+            </a>
+          </li>
+          <li>
+            <a href="#rintasyövän-toteaminen">
+              <div class="pallo">3</div>
+              <span>Rintasyövän toteaminen, diagnoosi</span>
+            </a>
+          </li>
+          <li>
+            <a href="#lähete-ja-lisätutkimuksia">
+              <div class="pallo">4</div>
+              <span
+                >Lähete rintarauhaskirurgian yksikköön ja lisätutkimuksia</span
+              >
+            </a>
+          </li>
+        </ul>
+        <ul class="indexMenu">
+          <li>
+            <a href="#yksilöllinen-hoitosuunnitelma">
+              <div class="pallo">5</div>
+              <span>Yksilöllinen hoitosuunnitelma</span>
+            </a>
+          </li>
+          <li>
+            <a href="#hoito">
+              <div class="pallo">6</div>
+              <span>Hoito:  leikkaus - lääkehoito - sädehoito</span>
+            </a>
+          </li>
+          <li>
+            <a href="#seuranta">
+              <div class="pallo">7</div>
+              <span>Seuranta</span>
+            </a>
+          </li>
+          <li>
+            <a href="#hoidot-ohi">
+              <div class="pallo">8</div>
+              <span>Hoidot ohi - mitä nyt?</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <h3>Muita vaiheita</h3>
+      <div class="indexMenuWrap">
+        <ul class="indexMenu">
+          <li>
+            <a href="#tiedonjano">
+              <div class="pallo bg-light-blue">
+                <svg
+                  width="12"
+                  height="17"
+                  viewBox="0 0 12 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.46967 16.5303C5.76256 16.8232 6.23744 16.8232 6.53033 16.5303L11.3033 11.7574C11.5962 11.4645 11.5962 10.9896 11.3033 10.6967C11.0104 10.4038 10.5355 10.4038 10.2426 10.6967L6 14.9393L1.75736 10.6967C1.46447 10.4038 0.989592 10.4038 0.696699 10.6967C0.403805 10.9896 0.403805 11.4645 0.696699 11.7574L5.46967 16.5303ZM5.25 -3.68815e-08L5.25 16L6.75 16L6.75 3.68815e-08L5.25 -3.68815e-08Z"
+                    fill="#0074B0"
+                  />
+                </svg>
+              </div>
+              <span>Tiedonjano</span>
+            </a>
+          </li>
+          <li>
+            <a href="#miten-kertoa-läheiselle">
+              <div class="pallo bg-light-blue">
+                <svg
+                  width="12"
+                  height="17"
+                  viewBox="0 0 12 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.46967 16.5303C5.76256 16.8232 6.23744 16.8232 6.53033 16.5303L11.3033 11.7574C11.5962 11.4645 11.5962 10.9896 11.3033 10.6967C11.0104 10.4038 10.5355 10.4038 10.2426 10.6967L6 14.9393L1.75736 10.6967C1.46447 10.4038 0.989592 10.4038 0.696699 10.6967C0.403805 10.9896 0.403805 11.4645 0.696699 11.7574L5.46967 16.5303ZM5.25 -3.68815e-08L5.25 16L6.75 16L6.75 3.68815e-08L5.25 -3.68815e-08Z"
+                    fill="#0074B0"
+                  />
+                </svg>
+              </div>
+              <span>Miten kertoa läheiselle</span>
+            </a>
+          </li>
+          <li>
+            <a href="#psyykkinen-tuki">
+              <div class="pallo bg-light-blue">
+                <svg
+                  width="12"
+                  height="17"
+                  viewBox="0 0 12 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.46967 16.5303C5.76256 16.8232 6.23744 16.8232 6.53033 16.5303L11.3033 11.7574C11.5962 11.4645 11.5962 10.9896 11.3033 10.6967C11.0104 10.4038 10.5355 10.4038 10.2426 10.6967L6 14.9393L1.75736 10.6967C1.46447 10.4038 0.989592 10.4038 0.696699 10.6967C0.403805 10.9896 0.403805 11.4645 0.696699 11.7574L5.46967 16.5303ZM5.25 -3.68815e-08L5.25 16L6.75 16L6.75 3.68815e-08L5.25 -3.68815e-08Z"
+                    fill="#0074B0"
+                  />
+                </svg>
+              </div>
+              <span>Psyykkinen tuki</span>
+            </a>
+          </li>
+          <li>
+            <a href="#vertaistuki">
+              <div class="pallo bg-light-blue">
+                <svg
+                  width="12"
+                  height="17"
+                  viewBox="0 0 12 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.46967 16.5303C5.76256 16.8232 6.23744 16.8232 6.53033 16.5303L11.3033 11.7574C11.5962 11.4645 11.5962 10.9896 11.3033 10.6967C11.0104 10.4038 10.5355 10.4038 10.2426 10.6967L6 14.9393L1.75736 10.6967C1.46447 10.4038 0.989592 10.4038 0.696699 10.6967C0.403805 10.9896 0.403805 11.4645 0.696699 11.7574L5.46967 16.5303ZM5.25 -3.68815e-08L5.25 16L6.75 16L6.75 3.68815e-08L5.25 -3.68815e-08Z"
+                    fill="#0074B0"
+                  />
+                </svg>
+              </div>
+              <span>Vertaistuki</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="indexMenu">
+          <li>
+            <a href="#luento">
+              <div class="pallo bg-light-blue">
+                <svg
+                  width="12"
+                  height="17"
+                  viewBox="0 0 12 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.46967 16.5303C5.76256 16.8232 6.23744 16.8232 6.53033 16.5303L11.3033 11.7574C11.5962 11.4645 11.5962 10.9896 11.3033 10.6967C11.0104 10.4038 10.5355 10.4038 10.2426 10.6967L6 14.9393L1.75736 10.6967C1.46447 10.4038 0.989592 10.4038 0.696699 10.6967C0.403805 10.9896 0.403805 11.4645 0.696699 11.7574L5.46967 16.5303ZM5.25 -3.68815e-08L5.25 16L6.75 16L6.75 3.68815e-08L5.25 -3.68815e-08Z"
+                    fill="#0074B0"
+                  />
+                </svg>
+              </div>
+              <span
+                >Luento: Varhaisvaiheen rintasyövän diagnosointi ja
+                hoitopolku</span
+              >
+            </a>
+          </li>
+          <li>
+            <a href="#hoitopolut">
+              <div class="pallo bg-light-blue">
+                <svg
+                  width="12"
+                  height="17"
+                  viewBox="0 0 12 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.46967 16.5303C5.76256 16.8232 6.23744 16.8232 6.53033 16.5303L11.3033 11.7574C11.5962 11.4645 11.5962 10.9896 11.3033 10.6967C11.0104 10.4038 10.5355 10.4038 10.2426 10.6967L6 14.9393L1.75736 10.6967C1.46447 10.4038 0.989592 10.4038 0.696699 10.6967C0.403805 10.9896 0.403805 11.4645 0.696699 11.7574L5.46967 16.5303ZM5.25 -3.68815e-08L5.25 16L6.75 16L6.75 3.68815e-08L5.25 -3.68815e-08Z"
+                    fill="#0074B0"
+                  />
+                </svg>
+              </div>
+              <span>Hoitopolut eri sairaaloissa</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#hyödylliset-linkit">
+              <div class="pallo bg-light-blue">
+                <svg
+                  width="12"
+                  height="17"
+                  viewBox="0 0 12 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.46967 16.5303C5.76256 16.8232 6.23744 16.8232 6.53033 16.5303L11.3033 11.7574C11.5962 11.4645 11.5962 10.9896 11.3033 10.6967C11.0104 10.4038 10.5355 10.4038 10.2426 10.6967L6 14.9393L1.75736 10.6967C1.46447 10.4038 0.989592 10.4038 0.696699 10.6967C0.403805 10.9896 0.403805 11.4645 0.696699 11.7574L5.46967 16.5303ZM5.25 -3.68815e-08L5.25 16L6.75 16L6.75 3.68815e-08L5.25 -3.68815e-08Z"
+                    fill="#0074B0"
+                  />
+                </svg>
+              </div>
+              <span>Hyödyllisiä linkkejä</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <h2 style="margin: 60px 0 40px">Hoitopolku</h2>
+      <!-- 1. -->
+      <div id="epäily-rintasyövästä" class="Box">
+        <header>
+          <svg
+            width="69"
+            height="74"
+            viewBox="0 0 69 74"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_65_5439)">
+              <path
+                d="M41.3515 73.9998C33.8968 73.9998 26.8895 71.0694 21.6305 65.7426C16.9002 60.9635 14.2708 54.4591 14.2437 47.448H16.9544C16.9815 53.7196 19.3264 59.5394 23.5552 63.8118C28.3126 68.6182 34.6287 71.2611 41.365 71.2611C49.4703 71.2611 57.1282 67.2762 61.8586 60.6212C62.9971 59.019 63.9188 57.2526 64.5965 55.3628C66.6567 49.6389 66.0467 42.9154 62.9158 36.9176C59.6493 30.6597 57.3587 23.6349 56.0846 16.0076L58.7547 15.5557C59.9746 22.8817 62.1839 29.6463 65.3148 35.6304C68.7982 42.3129 69.4759 49.8443 67.1446 56.294C66.3856 58.4165 65.3419 60.4021 64.0543 62.2096C58.8225 69.5905 50.3377 73.9998 41.365 73.9998H41.3515Z"
+                fill="#1B3350"
+              />
+              <path
+                d="M42.4359 60.7035C45.7895 60.7035 48.5081 57.9569 48.5081 54.5688C48.5081 51.1807 45.7895 48.4341 42.4359 48.4341C39.0824 48.4341 36.3638 51.1807 36.3638 54.5688C36.3638 57.9569 39.0824 60.7035 42.4359 60.7035Z"
+                fill="#1B3350"
+              />
+              <path
+                d="M2.50597 33.9324L21.7119 3.29993C23.3248 0.725543 27.0386 0.725543 28.6515 3.29993L47.8574 33.9324C49.5923 36.6985 47.627 40.3136 44.3876 40.3136H5.97577C2.73638 40.3136 0.771066 36.6985 2.50597 33.9324Z"
+                fill="#FAD4DC"
+              />
+              <path
+                d="M44.3874 41.6695H5.97562C3.95609 41.6695 2.16697 40.6014 1.19109 38.8076C0.215205 37.0137 0.282975 34.9186 1.36729 33.1932L20.5732 2.57439C21.5762 0.972243 23.3111 0 25.1951 0C27.0791 0 28.8004 0.958549 29.817 2.57439L49.0229 33.2069C50.1072 34.9323 50.1749 37.0274 49.1991 38.8212C48.2232 40.6151 46.4341 41.6832 44.4145 41.6832L44.3874 41.6695ZM3.64435 34.6584C3.10219 35.5348 3.06153 36.5892 3.56302 37.493C4.05096 38.3967 4.95908 38.9308 5.97562 38.9308H44.3874C45.404 38.9308 46.3121 38.3967 46.8 37.493C47.288 36.5892 47.2609 35.5348 46.7187 34.6584L27.5128 4.0396C26.9977 3.21799 26.1438 2.75241 25.1815 2.73871C24.2192 2.73871 23.3653 3.20429 22.8502 4.0396L3.64435 34.6584Z"
+                fill="#1B3350"
+              />
+              <path
+                d="M27.1743 10.1333H23.1895V25.0867H27.1743V10.1333Z"
+                fill="#1B3350"
+              />
+              <path
+                d="M25.1814 36.0277C27.2699 36.0277 28.963 34.3172 28.963 32.2072C28.963 30.0972 27.2699 28.3867 25.1814 28.3867C23.093 28.3867 21.3999 30.0972 21.3999 32.2072C21.3999 34.3172 23.093 36.0277 25.1814 36.0277Z"
+                fill="#1B3350"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_65_5439">
+                <rect
+                  width="68"
+                  height="74"
+                  fill="white"
+                  transform="translate(0.5)"
+                />
+              </clipPath>
+            </defs>
+          </svg>
+
+          <h3>Epäily rintasyövästä</h3>
+          <span>1/8</span>
+        </header>
+        <blockquote>
+          <div>
+            <svg
+              width="39"
+              height="26"
+              viewBox="0 0 39 26"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_65_5074)">
+                <path
+                  d="M16.7645 20.0126C16.7645 24.0091 14.0884 26 8.73631 26C5.88185 26 3.80047 25.4354 2.47731 24.2914C1.15415 23.1474 0.5 21.2606 0.5 18.616C0.5 15.6891 1.48122 12.5691 3.44366 9.256C5.4061 5.95771 7.81455 2.97143 10.669 0.341714C11.3083 0.490286 11.9773 0.549714 12.6463 0.549714C13.3153 0.549714 14.0141 0.52 14.7277 0.445714C12.9437 2.73371 11.457 4.992 10.2825 7.23543C9.10798 9.47886 8.30516 11.752 7.87402 14.0251C10.9366 13.9509 13.1964 14.4114 14.6236 15.4217C16.0509 16.4171 16.7645 17.9474 16.7645 20.0274V20.0126ZM38.5 19.6857C38.5 23.6823 35.8239 25.6731 30.4718 25.6731C27.6174 25.6731 25.536 25.1086 24.2128 23.9646C22.8897 22.8206 22.2355 20.9337 22.2355 18.2891C22.2355 15.3623 23.2167 12.2423 25.1792 8.92914C27.1416 5.616 29.5501 2.62971 32.4045 0C33.0438 0.148571 33.7128 0.208 34.3819 0.208C35.0509 0.208 35.7496 0.178286 36.4632 0.104C34.6792 2.392 33.1925 4.65029 32.018 6.89372C30.8435 9.13714 30.0407 11.4103 29.6095 13.6834C32.6721 13.6091 34.9319 14.0697 36.3592 15.08C37.7864 16.0754 38.5 17.6057 38.5 19.6857Z"
+                  fill="#0074B0"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_65_5074">
+                  <rect
+                    width="38"
+                    height="26"
+                    fill="white"
+                    transform="translate(0.5)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+            <div class="vertical-line"></div>
+          </div>
+          <div>
+            <p>
+              Halusin viimeiseen asti uskoa, että se on jotain muuta kuin syöpä.
+            </p>
+            <p>
+              Pelotti, mutta halusin uskoa, että vaikka pahin pelkoni
+              toteutuisi, rintasyövän hoito on Suomessa huipputasoa.
+            </p>
+            <p>Kaipasin tietoa.</p>
+          </div>
+        </blockquote>
+        <p>
+          Usein rintasyöpäepäilyn taustalla on rinnan alueelta tai kainalosta
+          löytynyt kyhmy, joka löytyy rintaa tunnusteltaessa. Rintasyövällä voi
+          olla myös muita oireita. Jos sinulla on rintasyöpään liittyviä oireita
+          tai muusta syystä epäilet rintasyöpää, on tärkeää varata aika
+          lääkärille mahdollisimman pian. Oireet eivät välttämättä kerro, että
+          sinulle on rintasyöpä, kyhmy voi olla esim. tulehtunut rintarauhanen
+          tai vaaraton kysta. On kuitenkin tärkeä käydä tarkistuttamassa
+          tilanne.
+        </p>
+
+        <a class="BoxLink" href=""
+          ><svg
+            width="26"
+            height="16"
+            viewBox="0 0 26 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M25.2071 8.70711C25.5976 8.31658 25.5976 7.68342 25.2071 7.29289L18.8431 0.928932C18.4526 0.538408 17.8195 0.538408 17.4289 0.928932C17.0384 1.31946 17.0384 1.95262 17.4289 2.34315L23.0858 8L17.4289 13.6569C17.0384 14.0474 17.0384 14.6805 17.4289 15.0711C17.8195 15.4616 18.4526 15.4616 18.8431 15.0711L25.2071 8.70711ZM0.5 9H24.5V7H0.5V9Z"
+              fill="#0074B0"
+            />
+          </svg>
+          X Tunne Rintasi: Rintasyövän oireet
+        </a>
+      </div>
+      <!-- 2. -->
+      <div id="lääkärin-vastaanotto" class="Box">
+        <header>
+          <svg
+            width="70"
+            height="80"
+            viewBox="0 0 70 80"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_65_5560)">
+              <path
+                d="M69.6798 64.2102V78.1402H67.2498V64.2102C67.2498 58.2502 62.7898 53.2102 56.8798 52.4702L54.5098 52.1802V63.9702C56.9698 64.5202 58.8298 66.7302 58.8298 69.3602C58.8298 72.4102 56.3398 74.9002 53.2898 74.9002C50.2398 74.9002 47.7498 72.4102 47.7498 69.3602C47.7498 66.7302 49.6098 64.5202 52.0698 63.9702V51.8902L49.1698 51.5302L36.1698 64.0402V79.0302H33.7398V64.0802L19.0098 51.5402L16.4098 59.4002C19.7198 60.2502 22.2098 63.7002 22.2098 67.8002V70.5902C23.1398 71.0402 23.7998 71.9902 23.7998 73.0902C23.7998 74.6402 22.5498 75.8902 20.9998 75.8902C19.4498 75.8902 18.2098 74.6402 18.2098 73.0902C18.2098 71.9902 18.8498 71.0402 19.7898 70.5902V67.8002C19.7898 64.3902 17.5598 61.6102 14.7998 61.6102C12.0398 61.6102 9.79977 64.3902 9.79977 67.8002V70.5902C10.7298 71.0402 11.3898 71.9902 11.3898 73.0902C11.3898 74.6402 10.1398 75.8902 8.58977 75.8902C7.03977 75.8902 5.79977 74.6402 5.79977 73.0902C5.79977 71.9902 6.45977 71.0402 7.37977 70.5902V67.8002C7.37977 63.4002 10.2498 59.7702 13.9098 59.2502L16.4598 51.5802L12.6698 52.1602C6.87977 53.0702 2.67977 57.9902 2.67977 63.8402V78.1402H0.259766V63.8402C0.259766 56.7702 5.31977 50.8602 12.2998 49.7702L20.2798 48.5302C22.0298 48.5302 23.5298 47.2902 23.8598 45.5802L24.4998 42.2902C21.5998 40.2402 19.5298 37.3502 18.8398 34.0002L18.0498 30.1502L17.8098 30.2102C16.7398 30.4502 15.6898 29.7702 15.4398 28.7202L14.4598 24.3702C14.2198 23.3002 14.8798 22.2502 15.9498 22.0002L16.3698 21.9002L15.8098 19.2202C14.9598 15.0402 16.0498 10.8202 18.9098 7.33023C22.5298 2.90023 28.5298 0.240234 34.9698 0.240234C41.4098 0.240234 47.2298 2.83023 50.8598 7.15023C53.7298 10.5602 54.8998 14.7002 54.1698 18.8402L53.6198 21.9702L53.7198 21.9902C54.7898 22.2302 55.4598 23.2902 55.2098 24.3602L54.2298 28.7102C54.1098 29.2202 53.8098 29.6602 53.3598 29.9502C52.9998 30.1702 52.5798 30.2802 52.1798 30.2402L51.5698 33.6602C50.9298 37.3102 48.6798 40.4202 45.4798 42.5502L46.1798 46.1702C46.4798 47.7202 47.7498 48.9002 49.3098 49.1002L57.1698 50.0702C64.2998 50.9402 69.6798 57.0302 69.6798 64.2102ZM56.4098 69.3602C56.4098 67.6502 55.0098 66.2502 53.2998 66.2502C51.5898 66.2502 50.1898 67.6502 50.1898 69.3602C50.1898 71.0702 51.5898 72.4702 53.2998 72.4702C55.0098 72.4702 56.4098 71.0702 56.4098 69.3602ZM51.9698 27.7302L52.7598 24.2702L50.8398 23.8302L51.3498 20.9002C46.6498 19.5602 43.8298 18.6302 42.0898 14.8902C36.0098 21.7402 28.2498 24.5302 21.9798 24.5302C20.4898 24.5302 19.0898 24.3602 17.8198 24.0602L16.9298 24.2702L17.7198 27.7302L19.9398 27.2302L21.2298 33.5102C22.3698 39.0702 28.2398 43.1002 35.1898 43.1002C42.1398 43.1002 48.2098 38.8602 49.1898 33.2502L50.2198 27.3402L51.9698 27.7302ZM51.7898 18.4202C52.3798 15.0102 51.3998 11.5602 49.0098 8.72023C45.8398 4.93023 40.5798 2.67023 34.9798 2.67023C29.3798 2.67023 23.9798 4.99023 20.8098 8.87023C18.4298 11.7702 17.5098 15.2802 18.2098 18.7302L18.8398 21.8002C25.0598 23.0302 34.3798 20.6102 41.1598 12.2202C40.9798 11.5802 40.8198 10.9002 40.6698 10.1302L43.0498 9.67023C44.2798 16.0902 45.9398 16.8302 51.7798 18.5002V18.4202H51.7898ZM34.9298 61.8802L46.6098 50.6402C45.1898 49.7802 44.1498 48.3602 43.8198 46.6502L43.2598 43.8002C40.8698 44.9002 38.1198 45.5402 35.1998 45.5402C32.1198 45.5402 29.2298 44.8402 26.7398 43.6102L26.2498 46.0502C25.7998 48.3802 24.0398 50.1702 21.8298 50.7502L34.9298 61.9002V61.8802Z"
+                fill="#1B3350"
+              />
+              <path
+                d="M49.0002 8.71992C51.3902 11.5599 52.3802 15.0099 51.7802 18.4199V18.4999C45.9302 16.8399 44.2602 16.0999 43.0402 9.66992L40.6602 10.1299C40.8102 10.8899 40.9602 11.5699 41.1502 12.2199C34.3802 20.6099 25.0502 23.0299 18.8302 21.7999L18.2002 18.7299C17.5002 15.2799 18.4202 11.7699 20.8002 8.86992C23.9702 4.97992 29.2602 2.66992 34.9702 2.66992C40.6802 2.66992 45.8402 4.92992 49.0002 8.71992Z"
+                fill="#FFE682"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_65_5560">
+                <rect width="69.93" height="79.27" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+
+          <h3>Lääkärin vastaanotto ja näytteiden otto</h3>
+          <span>2/8</span>
+        </header>
+        <blockquote>
+          <div>
+            <svg
+              width="39"
+              height="26"
+              viewBox="0 0 39 26"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_65_5074)">
+                <path
+                  d="M16.7645 20.0126C16.7645 24.0091 14.0884 26 8.73631 26C5.88185 26 3.80047 25.4354 2.47731 24.2914C1.15415 23.1474 0.5 21.2606 0.5 18.616C0.5 15.6891 1.48122 12.5691 3.44366 9.256C5.4061 5.95771 7.81455 2.97143 10.669 0.341714C11.3083 0.490286 11.9773 0.549714 12.6463 0.549714C13.3153 0.549714 14.0141 0.52 14.7277 0.445714C12.9437 2.73371 11.457 4.992 10.2825 7.23543C9.10798 9.47886 8.30516 11.752 7.87402 14.0251C10.9366 13.9509 13.1964 14.4114 14.6236 15.4217C16.0509 16.4171 16.7645 17.9474 16.7645 20.0274V20.0126ZM38.5 19.6857C38.5 23.6823 35.8239 25.6731 30.4718 25.6731C27.6174 25.6731 25.536 25.1086 24.2128 23.9646C22.8897 22.8206 22.2355 20.9337 22.2355 18.2891C22.2355 15.3623 23.2167 12.2423 25.1792 8.92914C27.1416 5.616 29.5501 2.62971 32.4045 0C33.0438 0.148571 33.7128 0.208 34.3819 0.208C35.0509 0.208 35.7496 0.178286 36.4632 0.104C34.6792 2.392 33.1925 4.65029 32.018 6.89372C30.8435 9.13714 30.0407 11.4103 29.6095 13.6834C32.6721 13.6091 34.9319 14.0697 36.3592 15.08C37.7864 16.0754 38.5 17.6057 38.5 19.6857Z"
+                  fill="#0074B0"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_65_5074">
+                  <rect
+                    width="38"
+                    height="26"
+                    fill="white"
+                    transform="translate(0.5)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+            <div class="vertical-line"></div>
+          </div>
+          <div>
+            <p>
+              Minulle tehtiin tomografia ja muita pelottavia tutkimuksia ja
+              keneenkään ei saanut yhteyttä.
+            </p>
+            <p>
+              Vein sairaalaan terveen vaimon ja hain seuraavana päivänä
+              syöpäsairaan takaisin.
+            </p>
+            <p>
+              Ultraava lääkäri sanoi: Olipa tämä mitä tahansa, niin kyllä me se
+              hoidetaan.
+            </p>
+            <p>
+              Kauhistuin kun kuulin, että imusolmukkeista löytyi etäpesäkkeitä,
+              luulin, että se tarkoittaa, että minulla on levinnyt rintasyöpä.
+            </p>
+          </div>
+        </blockquote>
+        <p>
+          Jos sinulla epäillään rintasyöpää, lääkäri tutkii rintasi ja sen
+          läheisyydessä olevat imusolmukkeet tunnustelemalla, ja tekee
+          mahdollisesti lähetteen tarkempiin tutkimuksiin, esimerkiksi
+          ultraäänitutkimukseen, mammografiaan tai paksuneulanäytteeseen. Mikäli
+          tutkimuksista löytyy jotakin rintasyöpään viittaavaa, saat lähetteen
+          erikoissairaanhoitoon. Kipu kuvantamistutkimuksissa on yksilöllisistä,
+          tarvittaessa saat toimenpiteisiin puudutuksen. 
+        </p>
+        <p>
+          Rintasyöpähoitojen aikana mielessä pyörii monenlaisia kysymyksiä ja
+          kaikkea ei tule edes ajatelleeksi.
+        </p>
+
+        <a class="BoxLink" href=""
+          ><svg
+            width="26"
+            height="16"
+            viewBox="0 0 26 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M25.2071 8.70711C25.5976 8.31658 25.5976 7.68342 25.2071 7.29289L18.8431 0.928932C18.4526 0.538408 17.8195 0.538408 17.4289 0.928932C17.0384 1.31946 17.0384 1.95262 17.4289 2.34315L23.0858 8L17.4289 13.6569C17.0384 14.0474 17.0384 14.6805 17.4289 15.0711C17.8195 15.4616 18.4526 15.4616 18.8431 15.0711L25.2071 8.70711ZM0.5 9H24.5V7H0.5V9Z"
+              fill="#0074B0"
+            />
+          </svg>
+          X Tukilista lääkärikäynneille
+        </a>
+      </div>
+      <!-- 3 -->
+      <div id="rintasyövän-toteaminen" class="Box">
+        <header>
+          <svg
+            width="55"
+            height="70"
+            viewBox="0 0 55 70"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_65_5515)">
+              <path
+                d="M52.08 16.99V67.19H2.75V2.25H37.34L52.08 16.99Z"
+                fill="#F9CFC7"
+              />
+              <path
+                d="M52.08 16.99L37.34 2.25H2.75V67.19H52.08V16.99ZM54.08 69.19H0.75V0.25H38.17L54.08 16.16V69.19Z"
+                fill="#1B3350"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M18.5 12V6H13.5L13.5 12H7.5V17H13.5L13.5 23H18.5V17H24.5V12H18.5Z"
+                fill="#FFE682"
+              />
+              <path
+                d="M53.08 17.99H36.75V1.25H38.75V15.99H53.08V17.99Z"
+                fill="#1B3350"
+              />
+              <path
+                d="M43.9701 31.98H8.37012V33.98H43.9701V31.98Z"
+                fill="#1B3350"
+              />
+              <path
+                d="M43.9701 40.6699H8.37012V42.6699H43.9701V40.6699Z"
+                fill="#1B3350"
+              />
+              <path
+                d="M43.9701 49.3701H8.37012V51.3701H43.9701V49.3701Z"
+                fill="#1B3350"
+              />
+              <path
+                d="M35.1001 58.0601H8.37012V60.0601H35.1001V58.0601Z"
+                fill="#1B3350"
+              />
+              <path
+                d="M20.1999 23.9899H13.2499V17.9099H7.16992V10.9599H13.2499V4.87988H20.1999V10.9599H26.2799V17.9099H20.1999V23.9899ZM15.2499 21.9899H18.1999V15.9099H24.2799V12.9599H18.1999V6.87988H15.2499V12.9599H9.16992V15.9099H15.2499V21.9899Z"
+                fill="#1B3350"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_65_5515">
+                <rect
+                  width="53.83"
+                  height="69.45"
+                  fill="white"
+                  transform="translate(0.5)"
+                />
+              </clipPath>
+            </defs>
+          </svg>
+
+          <h3>Rintasyövän toteaminen, diagnoosi</h3>
+          <span>3/8</span>
+        </header>
+        <blockquote>
+          <div>
+            <svg
+              width="39"
+              height="26"
+              viewBox="0 0 39 26"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_65_5074)">
+                <path
+                  d="M16.7645 20.0126C16.7645 24.0091 14.0884 26 8.73631 26C5.88185 26 3.80047 25.4354 2.47731 24.2914C1.15415 23.1474 0.5 21.2606 0.5 18.616C0.5 15.6891 1.48122 12.5691 3.44366 9.256C5.4061 5.95771 7.81455 2.97143 10.669 0.341714C11.3083 0.490286 11.9773 0.549714 12.6463 0.549714C13.3153 0.549714 14.0141 0.52 14.7277 0.445714C12.9437 2.73371 11.457 4.992 10.2825 7.23543C9.10798 9.47886 8.30516 11.752 7.87402 14.0251C10.9366 13.9509 13.1964 14.4114 14.6236 15.4217C16.0509 16.4171 16.7645 17.9474 16.7645 20.0274V20.0126ZM38.5 19.6857C38.5 23.6823 35.8239 25.6731 30.4718 25.6731C27.6174 25.6731 25.536 25.1086 24.2128 23.9646C22.8897 22.8206 22.2355 20.9337 22.2355 18.2891C22.2355 15.3623 23.2167 12.2423 25.1792 8.92914C27.1416 5.616 29.5501 2.62971 32.4045 0C33.0438 0.148571 33.7128 0.208 34.3819 0.208C35.0509 0.208 35.7496 0.178286 36.4632 0.104C34.6792 2.392 33.1925 4.65029 32.018 6.89372C30.8435 9.13714 30.0407 11.4103 29.6095 13.6834C32.6721 13.6091 34.9319 14.0697 36.3592 15.08C37.7864 16.0754 38.5 17.6057 38.5 19.6857Z"
+                  fill="#0074B0"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_65_5074">
+                  <rect
+                    width="38"
+                    height="26"
+                    fill="white"
+                    transform="translate(0.5)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+            <div class="vertical-line"></div>
+          </div>
+          <div>
+            <p>Minullako muka SYÖPÄ?</p>
+            <p>Perusturvallisuuteni mureni hetkessä ja se kesti pitkään.</p>
+            <p>
+              Diagnoosin varmistumisen jälkeen prosessi lähti etenemään kuin
+              juna, kalenteriin tuli samantien erilaisia aikoja.
+            </p>
+          </div>
+        </blockquote>
+        <p>
+          Lääkäri kertoo tutkimusten tulokset usein puhelimitse. Tieto siitä,
+          että sinulta tai läheiseltäsi on löytynyt syöpä, on usein todella
+          suuri järkytys. On hyvin ymmärrettävää ja tavallista, että olet
+          todella järkyttynyt ja voit kokea voimakkaita emotionaalisia,
+          psyykkisiä ja fyysisiäkin oireita diagnoosin kuulemisen jälkeen. Tässä
+          tilanteessa ei kannata jäädä yksin. On tärkeää tietää, että juuri nyt,
+          tässä hetkessä, ei välittömästi tapahdu mitään henkeä uhkaavaa. Olet
+          hyvissä käsissä. Sinulle tehdään tutkimuksia, joilla selvitetään
+          sairauden laatu ja siihen parhaiten sopiva hoito. Aina on toivoa! 
+        </p>
+        <p>
+          Jos et halua puhua läheisillesi tai sinulla ei ole lähellä ihmisiä,
+          joiden kanssa voit jakaa järkytystä, tukihenkilöiden ja saman
+          kokeneiden vertaisten tukea on tarjolla ja se voi auttaa jaksamaan
+          tässä vaikeassa tilanteessa.
+        </p>
+
+        <a class="BoxLink" href=""
+          ><svg
+            width="26"
+            height="16"
+            viewBox="0 0 26 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M25.2071 8.70711C25.5976 8.31658 25.5976 7.68342 25.2071 7.29289L18.8431 0.928932C18.4526 0.538408 17.8195 0.538408 17.4289 0.928932C17.0384 1.31946 17.0384 1.95262 17.4289 2.34315L23.0858 8L17.4289 13.6569C17.0384 14.0474 17.0384 14.6805 17.4289 15.0711C17.8195 15.4616 18.4526 15.4616 18.8431 15.0711L25.2071 8.70711ZM0.5 9H24.5V7H0.5V9Z"
+              fill="#0074B0"
+            />
+          </svg>
+          X Tukea ja yhteystiedot tuen hakemiseen
+        </a>
+      </div>
+      <!-- 4 -->
+      <div id="lähete-ja-lisätutkimuksia" class="Box">
+        <header>
+          <svg
+            width="66"
+            height="79"
+            viewBox="0 0 66 79"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_65_5610)">
+              <path
+                d="M63.1791 70.5295V76.1972H4.92383V70.5295C4.92383 69.7073 5.59126 69.0471 6.4098 69.0471H61.6806C62.4991 69.0471 63.1791 69.7073 63.1791 70.5295Z"
+                fill="#FFE682"
+              />
+              <path
+                d="M25.7906 36.3486C25.0224 37.1084 23.7631 37.1084 22.9949 36.3486L16.0058 29.4351C15.2376 28.6753 15.2376 27.4296 16.0058 26.6698L35.7517 7.15021C36.5198 6.39036 37.7666 6.39036 38.5347 7.15021L45.5239 14.0636C46.292 14.8235 46.292 16.0567 45.5239 16.8166L41.343 20.9522C40.0459 20.0304 38.4718 19.4823 36.7591 19.4823C32.4271 19.4823 28.9137 22.9701 28.9137 27.2552C28.9137 28.9493 29.4678 30.5064 30.3996 31.7894L25.7906 36.3486Z"
+                fill="#FFE682"
+              />
+              <path
+                d="M50.5108 54.4479C51.4011 54.4479 52.1227 53.7341 52.1227 52.8535C52.1227 51.9729 51.4011 51.259 50.5108 51.259C49.6206 51.259 48.8989 51.9729 48.8989 52.8535C48.8989 53.7341 49.6206 54.4479 50.5108 54.4479Z"
+                fill="#1B3350"
+              />
+              <path
+                d="M15.7792 32.7237L9.99897 38.4413L13.8902 42.2904L19.6578 36.5728L15.7792 32.7237ZM48.8736 8.32114L44.3275 3.83675L41.5445 6.58967L46.078 11.0865L48.8736 8.32114ZM36.7591 32.5244C39.7059 32.5244 42.0986 30.1576 42.0986 27.2552C42.0986 24.3528 39.7059 21.9736 36.7591 21.9736C33.8124 21.9736 31.4323 24.3404 31.4323 27.2552C31.4323 30.1701 33.825 32.5244 36.7591 32.5244ZM6.40996 69.0473C5.59142 69.0473 4.92399 69.7075 4.92399 70.5296V76.1974H63.1793V70.5296C63.1793 69.7075 62.4993 69.0473 61.6807 69.0473H6.40996ZM16.0058 29.4351L22.995 36.3486C23.7631 37.1084 25.0224 37.1084 25.7906 36.3486L30.3997 31.7895C29.4678 30.5064 28.9137 28.9493 28.9137 27.2552C28.9137 22.9701 32.4271 19.4823 36.7591 19.4823C38.4718 19.4823 40.0459 20.0304 41.343 20.9522L45.5239 16.8166C46.292 16.0567 46.292 14.8235 45.5239 14.0637L38.5347 7.15022C37.7666 6.39036 36.5199 6.39036 35.7517 7.15022L16.0058 26.6698C15.2377 27.4296 15.2377 28.6753 16.0058 29.4351ZM6.43515 38.4413L14.0161 30.9424C12.4924 29.1985 12.5554 26.5701 14.2302 24.9134L33.9635 5.38138C35.525 3.83675 37.9555 3.68727 39.7059 4.88311L44.3275 0.311523L52.4374 8.32114L47.8032 12.9052C49.0247 14.6367 48.8736 17.0408 47.3121 18.5854L43.1186 22.721C44.0505 23.9916 44.6172 25.5611 44.6172 27.2552C44.6172 27.7286 44.5668 28.2019 44.4787 28.6504C50.9263 33.7327 54.8553 41.2316 55.3338 49.4031C55.6864 49.9637 55.9509 50.5865 56.0894 51.2592L59.1747 66.5559H61.6807C63.8971 66.5559 65.6979 68.3372 65.6979 70.5296V78.6887H2.40538V70.5296C2.40538 68.3372 4.20618 66.5559 6.40996 66.5559H41.8341L44.0379 55.6564H0.314941V53.165H44.5416L44.932 51.2592C45.0705 50.5865 45.3224 49.9637 45.675 49.4031C44.4661 43.8101 41.406 38.7403 36.9732 35.0033C36.8977 35.0033 36.8347 35.0157 36.7591 35.0157C35.0465 35.0157 33.4724 34.4676 32.1753 33.5458L27.5662 38.105C26.6847 38.9769 25.5388 39.4005 24.3928 39.4005C23.3476 39.4005 22.3023 39.0268 21.4712 38.3167L13.8902 45.8032L6.43515 38.4413ZM53.6212 51.7574C53.319 50.2876 52.0093 49.2287 50.5107 49.2287C49.0121 49.2287 47.6899 50.2876 47.4002 51.7574L44.4031 66.5559H56.6057L53.6212 51.7574ZM43.5594 31.1292C42.7282 32.5368 41.4815 33.6579 39.9704 34.3306C43.7357 37.9306 46.4432 42.4648 47.8032 47.435C48.6092 46.999 49.541 46.7374 50.5107 46.7374C51.2285 46.7374 51.9211 46.8869 52.5634 47.136C51.6063 40.8953 48.4329 35.2275 43.5594 31.1292Z"
+                fill="#1B3350"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_65_5610">
+                <rect width="66" height="79" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+          <h3>Lähete rintarauhaskirurgian yksikköön ja lisätutkimuksia</h3>
+          <span>4/8</span>
+        </header>
+        <blockquote>
+          <div>
+            <svg
+              width="39"
+              height="26"
+              viewBox="0 0 39 26"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_65_5074)">
+                <path
+                  d="M16.7645 20.0126C16.7645 24.0091 14.0884 26 8.73631 26C5.88185 26 3.80047 25.4354 2.47731 24.2914C1.15415 23.1474 0.5 21.2606 0.5 18.616C0.5 15.6891 1.48122 12.5691 3.44366 9.256C5.4061 5.95771 7.81455 2.97143 10.669 0.341714C11.3083 0.490286 11.9773 0.549714 12.6463 0.549714C13.3153 0.549714 14.0141 0.52 14.7277 0.445714C12.9437 2.73371 11.457 4.992 10.2825 7.23543C9.10798 9.47886 8.30516 11.752 7.87402 14.0251C10.9366 13.9509 13.1964 14.4114 14.6236 15.4217C16.0509 16.4171 16.7645 17.9474 16.7645 20.0274V20.0126ZM38.5 19.6857C38.5 23.6823 35.8239 25.6731 30.4718 25.6731C27.6174 25.6731 25.536 25.1086 24.2128 23.9646C22.8897 22.8206 22.2355 20.9337 22.2355 18.2891C22.2355 15.3623 23.2167 12.2423 25.1792 8.92914C27.1416 5.616 29.5501 2.62971 32.4045 0C33.0438 0.148571 33.7128 0.208 34.3819 0.208C35.0509 0.208 35.7496 0.178286 36.4632 0.104C34.6792 2.392 33.1925 4.65029 32.018 6.89372C30.8435 9.13714 30.0407 11.4103 29.6095 13.6834C32.6721 13.6091 34.9319 14.0697 36.3592 15.08C37.7864 16.0754 38.5 17.6057 38.5 19.6857Z"
+                  fill="#0074B0"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_65_5074">
+                  <rect
+                    width="38"
+                    height="26"
+                    fill="white"
+                    transform="translate(0.5)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+            <div class="vertical-line"></div>
+          </div>
+          <div>
+            <p>On tärkeää, että vastaanotolla on tarpeeksi aikaa.</p>
+            <p>Miten olisin selvinnyt, jos ei minulla olisi läheistä mukana?</p>
+          </div>
+        </blockquote>
+        <p>
+          Jos sinulla epäillään rintasyöpää tutkimuksien jälkeen, saat
+          kiireellisen lähetteen rintasyöpäkirurgian yksikköön. Lääkäri tekee
+          arvion tarvittavista lisätutkimuksista, esimerkiksi rintojen
+          magneettitutkimus, varjoainekuvaus, nesterakkuloiden tyhjennys,
+          tietokonetomografia. 
+        </p>
+
+        <a
+          class="BoxLink"
+          href="https://www.europadonna.fi/rintasyopa/tietoa-rintasyovasta/diagnoosi/"
+          target="_blank"
+          ><svg
+            width="26"
+            height="16"
+            viewBox="0 0 26 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M25.2071 8.70711C25.5976 8.31658 25.5976 7.68342 25.2071 7.29289L18.8431 0.928932C18.4526 0.538408 17.8195 0.538408 17.4289 0.928932C17.0384 1.31946 17.0384 1.95262 17.4289 2.34315L23.0858 8L17.4289 13.6569C17.0384 14.0474 17.0384 14.6805 17.4289 15.0711C17.8195 15.4616 18.4526 15.4616 18.8431 15.0711L25.2071 8.70711ZM0.5 9H24.5V7H0.5V9Z"
+              fill="#0074B0"
+            />
+          </svg>
+          Todettiinko sinulla rintasyöpä?
+        </a>
+      </div>
+      <!-- 5 -->
+      <div id="yksilöllinen-hoitosuunnitelma" class="Box">
+        <header>
+          <svg
+            width="67"
+            height="70"
+            viewBox="0 0 67 70"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_65_5473)">
+              <path
+                d="M62.86 26.64L48.88 55.1501L39.02 50.32L53 21.8L62.86 26.64Z"
+                fill="#FAD4DC"
+              />
+              <path
+                d="M46.4199 25.6499H21.4199V27.6499H46.4199V25.6499Z"
+                fill="#1B3350"
+              />
+              <path
+                d="M46.4199 10.3501H21.4199V12.3501H46.4199V10.3501Z"
+                fill="#1B3350"
+              />
+              <path
+                d="M15.4299 15.3601V8.3501H8.41992V15.3601H15.4299ZM6.41992 17.3601V6.3501H17.4299V17.3601H6.41992Z"
+                fill="#1B3350"
+              />
+              <path
+                d="M15.4299 30.6599V23.6499H8.41992V30.6599H15.4299ZM17.4299 21.6499V32.6599H6.41992V21.6499H17.4299Z"
+                fill="#1B3350"
+              />
+              <path
+                d="M15.4299 45.9499V38.9399H8.41992V45.9499H15.4299ZM17.4299 36.9399V47.9499H6.41992V36.9399H17.4299Z"
+                fill="#1B3350"
+              />
+              <path
+                d="M15.4299 61.25V54.24H8.41992V61.25H15.4299ZM17.4299 52.24V63.25H6.41992V52.24H17.4299Z"
+                fill="#1B3350"
+              />
+              <path
+                d="M64.14 24.05C64.78 22.73 64.88 21.24 64.4 19.85C63.93 18.46 62.94 17.34 61.62 16.7C60.3 16.05 58.81 15.96 57.43 16.43C56.04 16.91 54.92 17.89 54.27 19.21L53.88 20.01L63.74 24.84L64.14 24.05ZM39.02 50.32L48.88 55.15L62.86 26.64L53 21.8L39.02 50.32ZM40.08 60.63L47.21 56.56L38.94 52.5L40.08 60.63ZM0.25 0.25H53.58V16.69C54.43 15.71 55.52 14.97 56.78 14.54C58.67 13.89 60.71 14.02 62.5 14.9C64.3 15.78 65.65 17.31 66.29 19.2C66.94 21.1 66.81 23.13 65.93 24.93L53.58 50.11V69.2H0.25V0.25ZM2.25 67.2H51.58V54.19L50.1 57.21L38.51 63.83L37.72 58.24H21.42V56.24H37.44L36.65 50.61L40.41 42.94H21.42V40.94H41.39L51.6 20.13H51.58V2.25H2.25V67.2Z"
+                fill="#1B3350"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_65_5473">
+                <rect width="66.95" height="69.45" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+
+          <h3>Yksilöllinen hoitosuunnitelma</h3>
+          <span>5/8</span>
+        </header>
+        <blockquote>
+          <div>
+            <svg
+              width="39"
+              height="26"
+              viewBox="0 0 39 26"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_65_5074)">
+                <path
+                  d="M16.7645 20.0126C16.7645 24.0091 14.0884 26 8.73631 26C5.88185 26 3.80047 25.4354 2.47731 24.2914C1.15415 23.1474 0.5 21.2606 0.5 18.616C0.5 15.6891 1.48122 12.5691 3.44366 9.256C5.4061 5.95771 7.81455 2.97143 10.669 0.341714C11.3083 0.490286 11.9773 0.549714 12.6463 0.549714C13.3153 0.549714 14.0141 0.52 14.7277 0.445714C12.9437 2.73371 11.457 4.992 10.2825 7.23543C9.10798 9.47886 8.30516 11.752 7.87402 14.0251C10.9366 13.9509 13.1964 14.4114 14.6236 15.4217C16.0509 16.4171 16.7645 17.9474 16.7645 20.0274V20.0126ZM38.5 19.6857C38.5 23.6823 35.8239 25.6731 30.4718 25.6731C27.6174 25.6731 25.536 25.1086 24.2128 23.9646C22.8897 22.8206 22.2355 20.9337 22.2355 18.2891C22.2355 15.3623 23.2167 12.2423 25.1792 8.92914C27.1416 5.616 29.5501 2.62971 32.4045 0C33.0438 0.148571 33.7128 0.208 34.3819 0.208C35.0509 0.208 35.7496 0.178286 36.4632 0.104C34.6792 2.392 33.1925 4.65029 32.018 6.89372C30.8435 9.13714 30.0407 11.4103 29.6095 13.6834C32.6721 13.6091 34.9319 14.0697 36.3592 15.08C37.7864 16.0754 38.5 17.6057 38.5 19.6857Z"
+                  fill="#0074B0"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_65_5074">
+                  <rect
+                    width="38"
+                    height="26"
+                    fill="white"
+                    transform="translate(0.5)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+            <div class="vertical-line"></div>
+          </div>
+          <div>
+            <p>
+              Luulin rintasyövän olevan vain yksi sairaus. Olisin kaivannut
+              vertaistukea ja tietoa juuri minun syöpätyypistäni.
+            </p>
+            <p>
+              Positiivinen asenne auttoi minua löytämään pienimmätkin
+              positiiviset asiat elämästä.
+            </p>
+            <p>
+              Olin kiitollinen, että asun Suomessa, ja saan varmasti erittäin
+              hyvää hoitoa.
+            </p>
+          </div>
+        </blockquote>
+        <p>
+          Tässä vaiheessa saat paljon tietoa rintasyövän luokittelusta ja sen
+          eri tyypeistä sekä siitä millainen syöpä sinulla on.
+          Hoitovaihtoehtojen valintaan vaikuttavat erilaiset tekijät, minkä
+          vuoksi moniammatillinen tiimi tekee sinulle yksilöllisen
+          hoitosuunnitelman pohjautuen henkilökohtaisiin tutkimustuloksiisi,
+          kliiniseen tutkimusnäyttöön ja hoitosuosituksiin. 
+        </p>
+        <p>
+          Rintasyövän eri tyyppejä on monia ja sitä tutkitaan
+          maailmanlaajuisesti. Hoidot ovat yhä yksilöllisempiä ja tarkempia,
+          nykyään hoito pystytään räätälöimään niin, että hoidon hyöty
+          saataisiin mahdollisimman pienillä haittavaikutuksilla.  
+        </p>
+        <p>
+          Terveydenhuollon ammattilaiset keskittyvät usein kommunikaatiossaan
+          faktoihin ja tilastoihin eivätkä ota kantaa yksilön ennusteeseen,
+          koska sitä on vaikea arvioida luotettavasti. Tämä voi tuntua erittäin
+          turhauttavalta, koska on luonnollista, että haluaisit tietää juuri
+          oman ennusteesi mahdollisimman tarkkaan. Vaikka et tätä tietoa
+          saisikaan, voit kuitenkin luottaa siihen, että sairauden hoitamiseksi
+          tehdään kaikki mahdollinen.
+        </p>
+        <p>
+          On luonnollista, että uudessa ja pelottavassa tilanteessa monet asiat
+          kasvavat vielä todellisuuttakin suuremmiksi. Silloin voi helposti
+          antaa suuria merkityksiä vaikka hoitohenkilökunnan yksittäisille
+          lauseille tai katseille, vaikka niistä ei oikeasti voi päätellä
+          mitään. On tärkeää tietää, että olet hyvissä käsissä ja tutkimuksia
+          tehdään, jotta saataisiin mahdollisimman tarkkaa tietoa sairautesi
+          laadusta.
+        </p>
+        <p>
+          Itseään kannattaa yrittää rauhoittaa: olen tehnyt oikein, kun olen
+          hakeutunut tutkimuksiin, nyt vastuu on ammattilaisten käsissä.
+          Jokaisen hoito suunnitellaan yksilöllisesti, eikä siksi kannata
+          verrata omaa tilannettaan toisen sairastuneen tilanteeseen. Sinulle
+          annetaan kaikki tarvittava tieto sairaudestasi, sekä tarvittava ja
+          asianmukainen hoito.
+        </p>
+      </div>
+      <!-- 6 -->
+      <div id="hoito" class="Box">
+        <header>
+          <svg
+            width="81"
+            height="86"
+            viewBox="0 0 81 86"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_65_5563)">
+              <path
+                d="M67.21 43.89C68.97 45.93 71.88 49.74 71.88 51.86C71.88 54.7 69.78 57.01 67.21 57.01C64.64 57.01 62.54 54.7 62.54 51.86C62.54 49.74 65.45 45.93 67.21 43.89Z"
+                fill="#FFE682"
+              />
+              <path
+                d="M64.9702 6.19004C66.2902 9.20004 64.9302 12.71 61.9202 14.04L49.5402 19.49L44.7402 8.60004L57.1302 3.14004C60.1302 1.82004 63.6502 3.19004 64.9702 6.19004Z"
+                fill="#FFE682"
+              />
+              <path
+                d="M27.8298 50.85C28.1498 51.53 28.0598 52.29 27.5898 52.88C27.1098 53.46 26.3998 53.71 25.6598 53.55L23.6998 53.1L23.6698 53.04L23.5898 53.08L18.6598 51.96C18.0798 51.82 17.5998 51.44 17.3498 50.9L7.83984 30.75L19.2398 32.64L27.8298 50.85Z"
+                fill="#FFE682"
+              />
+              <path
+                d="M16.0101 25.8L18.2001 30.44L6.81012 28.55L4.62012 23.91L16.0101 25.8Z"
+                fill="#FFE682"
+              />
+              <path
+                d="M11.3 15.8L14.97 23.6L3.57995 21.71L2.69995 19.85C2.15995 18.71 2.09995 17.42 2.52995 16.22C2.95995 15.03 3.82995 14.07 4.96995 13.53C7.33995 12.42 10.18 13.43 11.3 15.8Z"
+                fill="#FFE682"
+              />
+              <path
+                d="M71.88 51.86C71.88 49.74 68.97 45.93 67.21 43.89C65.45 45.93 62.54 49.74 62.54 51.86C62.54 54.7 64.64 57.01 67.21 57.01C69.78 57.01 71.88 54.7 71.88 51.86ZM73.88 51.86C73.88 55.8 70.89 59.01 67.21 59.01C63.53 59.01 60.54 55.8 60.54 51.86C60.54 48.18 65.87 42.36 66.48 41.71L67.21 40.92L67.94 41.71C68.55 42.36 73.88 48.18 73.88 51.86Z"
+                fill="#1B3350"
+              />
+              <path
+                d="M67.2101 30.41C69.2101 30.41 70.8301 28.78 70.8301 26.78C70.8301 24.78 69.2101 23.16 67.2101 23.16C65.2101 23.16 63.5801 24.78 63.5801 26.78C63.5801 28.78 65.2101 30.41 67.2101 30.41ZM71.4201 68.94H63.0001L64.2001 71.94H70.2201L71.4201 68.94ZM77.3601 33.45H57.0601C56.5201 33.45 56.0801 33.89 56.0801 34.42V65.97C56.0801 66.5 56.5201 66.94 57.0601 66.94H77.3601C77.9001 66.94 78.3301 66.5 78.3301 65.97V34.42C78.3301 33.89 77.9001 33.45 77.3601 33.45ZM54.0801 65.97V34.42C54.0801 32.78 55.4201 31.45 57.0601 31.45H64.0701C62.5701 30.44 61.5801 28.72 61.5801 26.78C61.5801 23.68 64.1101 21.16 67.2101 21.16C70.3101 21.16 72.8301 23.68 72.8301 26.78C72.8301 28.72 71.8501 30.44 70.3501 31.45H77.3601C79.0001 31.45 80.3301 32.78 80.3301 34.42V65.97C80.3301 67.61 79.0001 68.94 77.3601 68.94H73.5701L71.5701 73.94H68.2101V83.61H66.2101V73.94H62.8401L60.8401 68.94H57.0601C55.4201 68.94 54.0801 67.61 54.0801 65.97Z"
+                fill="#1B3350"
+              />
+              <path
+                d="M46.01 30.1601C47.1421 30.1601 48.06 29.2422 48.06 28.1101C48.06 26.9779 47.1421 26.0601 46.01 26.0601C44.8778 26.0601 43.96 26.9779 43.96 28.1101C43.96 29.2422 44.8778 30.1601 46.01 30.1601Z"
+                fill="#1B3350"
+              />
+              <path
+                d="M42.7702 24.88C42.7702 26.01 41.8502 26.93 40.7202 26.93C39.5902 26.93 38.6802 26.01 38.6802 24.88C38.6802 23.75 39.5902 22.83 40.7202 22.83C41.8502 22.83 42.7702 23.75 42.7702 24.88Z"
+                fill="#1B3350"
+              />
+              <path
+                d="M40.7202 30C41.8502 30 42.7702 30.92 42.7702 32.05C42.7702 33.18 41.8502 34.1 40.7202 34.1C39.5902 34.1 38.6802 33.18 38.6802 32.05C38.6802 30.92 39.5902 30 40.7202 30Z"
+                fill="#1B3350"
+              />
+              <path
+                d="M30.4702 83.51H5.22021V85.51H30.4702V83.51Z"
+                fill="#1B3350"
+              />
+              <path
+                d="M57.1299 3.14003L44.7399 8.60003L49.5399 19.49L61.9199 14.04C64.9299 12.71 66.2899 9.20003 64.9699 6.19003C63.6499 3.19003 60.1299 1.82003 57.1299 3.14003ZM38.6099 21.74L24.3999 15.48C22.4499 14.62 20.9599 13.06 20.1899 11.08C19.4199 9.10003 19.4699 6.94003 20.3199 5.00003C21.1799 3.05003 22.7399 1.56003 24.7199 0.79003C26.6999 0.0200302 28.8599 0.0700302 30.7999 0.93003L43.9999 6.74003L56.3199 1.31003C60.3299 -0.44997 65.0299 1.37003 66.7999 5.39003C68.5699 9.40003 66.7399 14.1 62.7299 15.87L48.5099 22.13L43.4799 10.69L38.6099 21.74ZM25.1999 13.65L37.5899 19.1L42.3799 8.21003L29.9999 2.76003C29.2299 2.42003 28.4199 2.25003 27.5999 2.25003C26.8699 2.25003 26.1399 2.38003 25.4399 2.65003C23.9599 3.23003 22.7899 4.35003 22.1499 5.80003C20.8299 8.81003 22.1999 12.33 25.1999 13.65Z"
+                fill="#1B3350"
+              />
+              <path
+                d="M18.1999 30.4401L16.0099 25.8001L4.61986 23.9101L6.80986 28.5501L18.1999 30.4401ZM11.2999 15.8001C10.1799 13.4301 7.33986 12.4201 4.96986 13.5301C3.82986 14.0701 2.95986 15.0301 2.52986 16.2201C2.09986 17.4201 2.15986 18.7101 2.69986 19.8501L3.57986 21.7101L14.9699 23.6001L11.2999 15.8001ZM32.4299 79.9901C33.7299 82.7401 36.8299 84.0801 39.6599 83.2701L26.5799 55.5401C26.4199 55.5601 26.2599 55.6 26.0999 55.6C25.8099 55.6 25.5099 55.56 25.2199 55.5L24.7799 55.4001L28.1499 62.5401L24.9199 64.06L32.4299 79.9901ZM18.6599 51.96L23.5899 53.0801L23.6699 53.0401L23.6999 53.1L25.6599 53.55C26.3999 53.71 27.1099 53.4601 27.5899 52.8801C28.0599 52.2901 28.1499 51.53 27.8299 50.85L19.2399 32.6401L7.83986 30.7501L17.3499 50.9001C17.5999 51.4401 18.0799 51.82 18.6599 51.96ZM0.64986 15.5501C1.25986 13.8501 2.48986 12.4901 4.11986 11.7201C7.48986 10.1301 11.5199 11.5801 13.1099 14.9501L29.6299 50C30.2799 51.37 30.0899 52.9501 29.1499 54.1301C28.9399 54.3901 28.6999 54.61 28.4399 54.8L42.3599 84.3001L41.4499 84.7301C40.3299 85.2601 39.1599 85.5101 37.9899 85.5101C34.9399 85.5101 32.0099 83.78 30.6199 80.84L22.2599 63.1L25.4799 61.5801L22.2999 54.8301L18.2199 53.91C17.0299 53.64 16.0599 52.85 15.5399 51.75L0.89986 20.7101C0.12986 19.0801 0.0398603 17.2401 0.64986 15.5501Z"
+                fill="#1B3350"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_65_5563">
+                <rect width="80.59" height="85.76" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+
+          <h3>Hoito</h3>
+          <span>6/8</span>
+        </header>
+        <blockquote>
+          <div>
+            <svg
+              width="39"
+              height="26"
+              viewBox="0 0 39 26"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_65_5074)">
+                <path
+                  d="M16.7645 20.0126C16.7645 24.0091 14.0884 26 8.73631 26C5.88185 26 3.80047 25.4354 2.47731 24.2914C1.15415 23.1474 0.5 21.2606 0.5 18.616C0.5 15.6891 1.48122 12.5691 3.44366 9.256C5.4061 5.95771 7.81455 2.97143 10.669 0.341714C11.3083 0.490286 11.9773 0.549714 12.6463 0.549714C13.3153 0.549714 14.0141 0.52 14.7277 0.445714C12.9437 2.73371 11.457 4.992 10.2825 7.23543C9.10798 9.47886 8.30516 11.752 7.87402 14.0251C10.9366 13.9509 13.1964 14.4114 14.6236 15.4217C16.0509 16.4171 16.7645 17.9474 16.7645 20.0274V20.0126ZM38.5 19.6857C38.5 23.6823 35.8239 25.6731 30.4718 25.6731C27.6174 25.6731 25.536 25.1086 24.2128 23.9646C22.8897 22.8206 22.2355 20.9337 22.2355 18.2891C22.2355 15.3623 23.2167 12.2423 25.1792 8.92914C27.1416 5.616 29.5501 2.62971 32.4045 0C33.0438 0.148571 33.7128 0.208 34.3819 0.208C35.0509 0.208 35.7496 0.178286 36.4632 0.104C34.6792 2.392 33.1925 4.65029 32.018 6.89372C30.8435 9.13714 30.0407 11.4103 29.6095 13.6834C32.6721 13.6091 34.9319 14.0697 36.3592 15.08C37.7864 16.0754 38.5 17.6057 38.5 19.6857Z"
+                  fill="#0074B0"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_65_5074">
+                  <rect
+                    width="38"
+                    height="26"
+                    fill="white"
+                    transform="translate(0.5)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+            <div class="vertical-line"></div>
+          </div>
+          <div>
+            <p>
+              Aina kun astuin sisään sairaalan ovesta tuli tunne, että olen
+              turvassa, sieltä lähteminen ahdisti.
+            </p>
+            <p>Hoitojen väliin mahtuu paljon tavallista arkea.</p>
+            <p>Tsemppilauseet vain ärsyttivät.</p>
+            <p>
+              Miten helvetissä minä voin taistella, hoito ei ole minun
+              käsissäni.
+            </p>
+          </div>
+        </blockquote>
+        <p>
+          Rintasyövän hoitoon liittyy usein  leikkaus-, lääke- ja sädehoito sekä
+          hormonihoidot, jos kyseessä on hormonipositiivinen syöpä. Hoidot
+          suunnitellaan yksilöllisesti, kaikkia hoitoja ei tule kaikille ja
+          niiden järjestys ja ajoitus voi vaihdella. 
+        </p>
+        <p>
+          Hoitoprosessi voi olla stressaavaa, potilaat ja heidän läheisensä
+          käyvät läpi hyvin erilaisia ​​tunteita, kuten pelkoa, ahdistusta ja
+          masennusta. Lisäksi rintasyövän hoitovaihtoehdoilla voi olla
+          yllättäviäkin sivuvaikutuksia, jotka voivat vaikuttaa jokapäiväiseen
+          elämään ja yleiseen hyvinvointiin. Hoitojen aikana voit erityisesti
+          tarvita tukea arkisiinkin asioihin, kuten kotitöihin ja kyydityksiin.
+        </p>
+        <h4>Leikkaushoito</h4>
+        <blockquote>
+          <div>
+            <svg
+              width="39"
+              height="26"
+              viewBox="0 0 39 26"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_65_5074)">
+                <path
+                  d="M16.7645 20.0126C16.7645 24.0091 14.0884 26 8.73631 26C5.88185 26 3.80047 25.4354 2.47731 24.2914C1.15415 23.1474 0.5 21.2606 0.5 18.616C0.5 15.6891 1.48122 12.5691 3.44366 9.256C5.4061 5.95771 7.81455 2.97143 10.669 0.341714C11.3083 0.490286 11.9773 0.549714 12.6463 0.549714C13.3153 0.549714 14.0141 0.52 14.7277 0.445714C12.9437 2.73371 11.457 4.992 10.2825 7.23543C9.10798 9.47886 8.30516 11.752 7.87402 14.0251C10.9366 13.9509 13.1964 14.4114 14.6236 15.4217C16.0509 16.4171 16.7645 17.9474 16.7645 20.0274V20.0126ZM38.5 19.6857C38.5 23.6823 35.8239 25.6731 30.4718 25.6731C27.6174 25.6731 25.536 25.1086 24.2128 23.9646C22.8897 22.8206 22.2355 20.9337 22.2355 18.2891C22.2355 15.3623 23.2167 12.2423 25.1792 8.92914C27.1416 5.616 29.5501 2.62971 32.4045 0C33.0438 0.148571 33.7128 0.208 34.3819 0.208C35.0509 0.208 35.7496 0.178286 36.4632 0.104C34.6792 2.392 33.1925 4.65029 32.018 6.89372C30.8435 9.13714 30.0407 11.4103 29.6095 13.6834C32.6721 13.6091 34.9319 14.0697 36.3592 15.08C37.7864 16.0754 38.5 17.6057 38.5 19.6857Z"
+                  fill="#0074B0"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_65_5074">
+                  <rect
+                    width="38"
+                    height="26"
+                    fill="white"
+                    transform="translate(0.5)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+            <div class="vertical-line"></div>
+          </div>
+          <div>
+            <p>
+              Leikkaava lääkäri oli ensimmäinen, joka sanoi, että me selviämme
+              tästä. Se tuntui todella tärkeältä ja kantoi viikkoja.
+            </p>
+            <p>Omainen hoiti mun haavat, en voinut itse katsoa verta.</p>
+          </div>
+        </blockquote>
+        <p>
+          Leikkaushoidolla pyritään poistamaan mahdollisimman paljon
+          syöpäkudosta rinnan alueelta, joskus leikkaus voidaan tehdä rintaa
+          säästäen, mutta toisinaan katsotaan parhaaksi poistaa koko rinta.
+          Leikkausta edeltävästi tehdään mahdollisesti lisäkuvantamiskokeita ja
+          konsultoidaan eri asiantuntijoita. Leikkauksen jälkeen voit joutua
+          olemaan sairaalassa muutaman päivän.
+        </p>
+        <a
+          class="BoxLink"
+          href="https://www.europadonna.fi/rintasyopa/hoitopolku/leikkaus/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><svg
+            width="26"
+            height="16"
+            viewBox="0 0 26 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M25.2071 8.70711C25.5976 8.31658 25.5976 7.68342 25.2071 7.29289L18.8431 0.928932C18.4526 0.538408 17.8195 0.538408 17.4289 0.928932C17.0384 1.31946 17.0384 1.95262 17.4289 2.34315L23.0858 8L17.4289 13.6569C17.0384 14.0474 17.0384 14.6805 17.4289 15.0711C17.8195 15.4616 18.4526 15.4616 18.8431 15.0711L25.2071 8.70711ZM0.5 9H24.5V7H0.5V9Z"
+              fill="#0074B0"
+            />
+          </svg>
+          Leikkaus
+        </a>
+        <h4>Lääkehoito</h4>
+        <blockquote>
+          <div>
+            <svg
+              width="39"
+              height="26"
+              viewBox="0 0 39 26"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_65_5074)">
+                <path
+                  d="M16.7645 20.0126C16.7645 24.0091 14.0884 26 8.73631 26C5.88185 26 3.80047 25.4354 2.47731 24.2914C1.15415 23.1474 0.5 21.2606 0.5 18.616C0.5 15.6891 1.48122 12.5691 3.44366 9.256C5.4061 5.95771 7.81455 2.97143 10.669 0.341714C11.3083 0.490286 11.9773 0.549714 12.6463 0.549714C13.3153 0.549714 14.0141 0.52 14.7277 0.445714C12.9437 2.73371 11.457 4.992 10.2825 7.23543C9.10798 9.47886 8.30516 11.752 7.87402 14.0251C10.9366 13.9509 13.1964 14.4114 14.6236 15.4217C16.0509 16.4171 16.7645 17.9474 16.7645 20.0274V20.0126ZM38.5 19.6857C38.5 23.6823 35.8239 25.6731 30.4718 25.6731C27.6174 25.6731 25.536 25.1086 24.2128 23.9646C22.8897 22.8206 22.2355 20.9337 22.2355 18.2891C22.2355 15.3623 23.2167 12.2423 25.1792 8.92914C27.1416 5.616 29.5501 2.62971 32.4045 0C33.0438 0.148571 33.7128 0.208 34.3819 0.208C35.0509 0.208 35.7496 0.178286 36.4632 0.104C34.6792 2.392 33.1925 4.65029 32.018 6.89372C30.8435 9.13714 30.0407 11.4103 29.6095 13.6834C32.6721 13.6091 34.9319 14.0697 36.3592 15.08C37.7864 16.0754 38.5 17.6057 38.5 19.6857Z"
+                  fill="#0074B0"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_65_5074">
+                  <rect
+                    width="38"
+                    height="26"
+                    fill="white"
+                    transform="translate(0.5)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+            <div class="vertical-line"></div>
+          </div>
+          <div>
+            <p>Minulla oli vatsa sekaisin kuukauden.</p>
+            <p>Minulla oli muistin kanssa haasteita.</p>
+            <p>
+              Sivuvaikutuksia on vaikka mitä, mistä saisi tukea ja tietoa
+              selkokielellä?
+            </p>
+          </div>
+        </blockquote>
+        <p>
+          Syöpäsolut jakautuvat aktiivisesti. Monet syöpälääkkeet, sytostaatit
+          eli solusalpaajat, vaikuttavat soluihin estämällä niiden jakautumisen
+          ja siten estävät syövän etenemisen. Myös terveet solut voivat jakautua
+          voimakkaasti, kuten esimerkiksi kynsien ja hiusten juurituppien solut.
+          Sytostaatit estävät myös näiden solujen jakautumisen, tästä johtuen
+          sytostaattihoitojen yleisiin haittoihin kuuluvat kynsien ja hiusten
+          lähtö. Sytostaateilla voi olla myös muita haittavaikutuksia, nämä
+          vaihtelevat yksilöllisesti ja lääkekohtaisesti.
+        </p>
+        <p>
+          Useimmat lääkehoidot annostellaan suonensisäisesti ja vaativat
+          ammattilaisten seurantaa, minkä vuoksi lääkkeet annetaan yleensä
+          sairaalassa. Uusia lääkehoitoja tulee paljon markkinoille ja
+          tutkimustieto ja hoitomuodot päivittyvät jatkuvasti, tämä on hyvä
+          huomioida myös tietoa hakiessa. 
+        </p>
+        <a
+          class="BoxLink"
+          href="https://www.europadonna.fi/rintasyopa/hoitopolku/sytostaattihoidot/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><svg
+            width="26"
+            height="16"
+            viewBox="0 0 26 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M25.2071 8.70711C25.5976 8.31658 25.5976 7.68342 25.2071 7.29289L18.8431 0.928932C18.4526 0.538408 17.8195 0.538408 17.4289 0.928932C17.0384 1.31946 17.0384 1.95262 17.4289 2.34315L23.0858 8L17.4289 13.6569C17.0384 14.0474 17.0384 14.6805 17.4289 15.0711C17.8195 15.4616 18.4526 15.4616 18.8431 15.0711L25.2071 8.70711ZM0.5 9H24.5V7H0.5V9Z"
+              fill="#0074B0"
+            />
+          </svg>
+          Lääkehoito
+        </a>
+        <h4>Sädehoito</h4>
+        <blockquote>
+          <div>
+            <svg
+              width="39"
+              height="26"
+              viewBox="0 0 39 26"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_65_5074)">
+                <path
+                  d="M16.7645 20.0126C16.7645 24.0091 14.0884 26 8.73631 26C5.88185 26 3.80047 25.4354 2.47731 24.2914C1.15415 23.1474 0.5 21.2606 0.5 18.616C0.5 15.6891 1.48122 12.5691 3.44366 9.256C5.4061 5.95771 7.81455 2.97143 10.669 0.341714C11.3083 0.490286 11.9773 0.549714 12.6463 0.549714C13.3153 0.549714 14.0141 0.52 14.7277 0.445714C12.9437 2.73371 11.457 4.992 10.2825 7.23543C9.10798 9.47886 8.30516 11.752 7.87402 14.0251C10.9366 13.9509 13.1964 14.4114 14.6236 15.4217C16.0509 16.4171 16.7645 17.9474 16.7645 20.0274V20.0126ZM38.5 19.6857C38.5 23.6823 35.8239 25.6731 30.4718 25.6731C27.6174 25.6731 25.536 25.1086 24.2128 23.9646C22.8897 22.8206 22.2355 20.9337 22.2355 18.2891C22.2355 15.3623 23.2167 12.2423 25.1792 8.92914C27.1416 5.616 29.5501 2.62971 32.4045 0C33.0438 0.148571 33.7128 0.208 34.3819 0.208C35.0509 0.208 35.7496 0.178286 36.4632 0.104C34.6792 2.392 33.1925 4.65029 32.018 6.89372C30.8435 9.13714 30.0407 11.4103 29.6095 13.6834C32.6721 13.6091 34.9319 14.0697 36.3592 15.08C37.7864 16.0754 38.5 17.6057 38.5 19.6857Z"
+                  fill="#0074B0"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_65_5074">
+                  <rect
+                    width="38"
+                    height="26"
+                    fill="white"
+                    transform="translate(0.5)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+            <div class="vertical-line"></div>
+          </div>
+          <div>
+            <p>En voinut kääntyä sängyssä.</p>
+          </div>
+        </blockquote>
+        <p>
+          Sädehoito, samoin kuin sytostaattihoito, tuhoaa syöpäsoluja ja estää
+          niitä jakautumasta. Sädehoito kohdennetaan mahdollisimman tarkasti,
+          sillä pyritään estämään syövän paikallinen uusiutuminen. Sädehoito
+          annetaan sairaalassa, jossa käydään hoitojakson aikana melko tiheästi.
+        </p>
+
+        <a
+          class="BoxLink"
+          href="https://www.europadonna.fi/rintasyopa/hoitopolku/sadehoito/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><svg
+            width="26"
+            height="16"
+            viewBox="0 0 26 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M25.2071 8.70711C25.5976 8.31658 25.5976 7.68342 25.2071 7.29289L18.8431 0.928932C18.4526 0.538408 17.8195 0.538408 17.4289 0.928932C17.0384 1.31946 17.0384 1.95262 17.4289 2.34315L23.0858 8L17.4289 13.6569C17.0384 14.0474 17.0384 14.6805 17.4289 15.0711C17.8195 15.4616 18.4526 15.4616 18.8431 15.0711L25.2071 8.70711ZM0.5 9H24.5V7H0.5V9Z"
+              fill="#0074B0"
+            />
+          </svg>
+          Sädehoito
+        </a>
+        <h4>Hormonihoito</h4>
+        <blockquote>
+          <div>
+            <svg
+              width="39"
+              height="26"
+              viewBox="0 0 39 26"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_65_5074)">
+                <path
+                  d="M16.7645 20.0126C16.7645 24.0091 14.0884 26 8.73631 26C5.88185 26 3.80047 25.4354 2.47731 24.2914C1.15415 23.1474 0.5 21.2606 0.5 18.616C0.5 15.6891 1.48122 12.5691 3.44366 9.256C5.4061 5.95771 7.81455 2.97143 10.669 0.341714C11.3083 0.490286 11.9773 0.549714 12.6463 0.549714C13.3153 0.549714 14.0141 0.52 14.7277 0.445714C12.9437 2.73371 11.457 4.992 10.2825 7.23543C9.10798 9.47886 8.30516 11.752 7.87402 14.0251C10.9366 13.9509 13.1964 14.4114 14.6236 15.4217C16.0509 16.4171 16.7645 17.9474 16.7645 20.0274V20.0126ZM38.5 19.6857C38.5 23.6823 35.8239 25.6731 30.4718 25.6731C27.6174 25.6731 25.536 25.1086 24.2128 23.9646C22.8897 22.8206 22.2355 20.9337 22.2355 18.2891C22.2355 15.3623 23.2167 12.2423 25.1792 8.92914C27.1416 5.616 29.5501 2.62971 32.4045 0C33.0438 0.148571 33.7128 0.208 34.3819 0.208C35.0509 0.208 35.7496 0.178286 36.4632 0.104C34.6792 2.392 33.1925 4.65029 32.018 6.89372C30.8435 9.13714 30.0407 11.4103 29.6095 13.6834C32.6721 13.6091 34.9319 14.0697 36.3592 15.08C37.7864 16.0754 38.5 17.6057 38.5 19.6857Z"
+                  fill="#0074B0"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_65_5074">
+                  <rect
+                    width="38"
+                    height="26"
+                    fill="white"
+                    transform="translate(0.5)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+            <div class="vertical-line"></div>
+          </div>
+          <div>
+            <p>
+              Teki mieli heittää lääkkeet seinään. Syöpähoidot loppuivat, miksi
+              piti vielä syödä hormoneita?
+            </p>
+            <p>
+              Vaikka hormonilääkkeistä tuli sivuvaikutuksia, ajattelin, että nyt
+              on vain purtava hammasta. Terveys edellä.
+            </p>
+          </div>
+        </blockquote>
+        <p>
+          Hormonipositiivista rintasyöpää sairastaville aloitetaan usein myös
+          hormonihoitoja. Elimistön estrogeeni voi lisätä hormonipositiivisten
+          syöpäsolujen lisääntymistä, mikä pyritään estämään hormonihoidoilla.
+          Hormonihoitojen sivuvaikutuksena voi olla vaihdevuosioireet. Jos nämä
+          eivät helpota elintapamuutoksilla, myös näitä oireita voidaan hoitaa
+          lääkkeillä.
+        </p>
+
+        <a class="BoxLink" href="" target="_blank" rel="noopener noreferrer"
+          ><svg
+            width="26"
+            height="16"
+            viewBox="0 0 26 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M25.2071 8.70711C25.5976 8.31658 25.5976 7.68342 25.2071 7.29289L18.8431 0.928932C18.4526 0.538408 17.8195 0.538408 17.4289 0.928932C17.0384 1.31946 17.0384 1.95262 17.4289 2.34315L23.0858 8L17.4289 13.6569C17.0384 14.0474 17.0384 14.6805 17.4289 15.0711C17.8195 15.4616 18.4526 15.4616 18.8431 15.0711L25.2071 8.70711ZM0.5 9H24.5V7H0.5V9Z"
+              fill="#0074B0"
+            />
+          </svg>
+          X Hormonihoito
+        </a>
+        <h4>Levinnyt rintasyöpä</h4>
+        <p>
+          Mikäli sinulla epäillään levinnyttä rintasyövän, levinneisyyden aste
+          kartotetaan erilaisilla kuvantamistutkimuksilla. Levinneen rintasyövän
+          hoidon tavoitteena on pidentää elinaikaa, vähentää taudista aiheutuvia
+          oireita sekä ylläpitää hyvää elämänlaatua. Syöpää saadaan pidettyä
+          usein vuosia kurissa hormonaalisella hoidolla, solunsalpaajilla, ja
+          täsmälääkkeillä.
+        </p>
+
+        <a
+          class="BoxLink"
+          href="https://www.europadonna.fi/rintasyopa/levinnyt-rintasyopa/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><svg
+            width="26"
+            height="16"
+            viewBox="0 0 26 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M25.2071 8.70711C25.5976 8.31658 25.5976 7.68342 25.2071 7.29289L18.8431 0.928932C18.4526 0.538408 17.8195 0.538408 17.4289 0.928932C17.0384 1.31946 17.0384 1.95262 17.4289 2.34315L23.0858 8L17.4289 13.6569C17.0384 14.0474 17.0384 14.6805 17.4289 15.0711C17.8195 15.4616 18.4526 15.4616 18.8431 15.0711L25.2071 8.70711ZM0.5 9H24.5V7H0.5V9Z"
+              fill="#0074B0"
+            />
+          </svg>
+          Levinnyt rintasyöpä
+        </a>
+      </div>
+      <!-- 7 -->
+      <div id="seuranta" class="Box">
+        <header>
+          <svg
+            width="80"
+            height="56"
+            viewBox="0 0 80 56"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_65_5642)">
+              <path
+                d="M77.75 47.01V48.62C77.75 50.99 75.82 52.92 73.45 52.92H17.96V2.25H73.45C75.82 2.25 77.75 4.18 77.75 6.55V6.66H72.5V8.66H77.75V14.33H72.5V16.33H77.75V22H72.5V24H77.75V29.67H72.5V31.67H77.75V37.34H72.5V39.34H77.75V45.01H72.5V47.01H77.75ZM43.46 41.04L67.45 13.98L65.96 12.65L43.46 38.03L32.13 25.24L21 37.8L22.5 39.12L32.13 28.26L43.46 41.04Z"
+                fill="#F9CFC7"
+              />
+              <path
+                d="M43.46 38.03L65.96 12.65L67.45 13.98L43.46 41.04L32.13 28.26L22.5 39.12L21 37.8L32.13 25.24L43.46 38.03Z"
+                fill="#FFE682"
+              />
+              <path
+                d="M9.02994 12.32C10.7365 12.32 12.1199 10.9366 12.1199 9.23001C12.1199 7.52345 10.7365 6.14001 9.02994 6.14001C7.32338 6.14001 5.93994 7.52345 5.93994 9.23001C5.93994 10.9366 7.32338 12.32 9.02994 12.32Z"
+                fill="#1B3350"
+              />
+              <path
+                d="M9.02994 22.72C10.7365 22.72 12.1199 21.3366 12.1199 19.63C12.1199 17.9235 10.7365 16.54 9.02994 16.54C7.32338 16.54 5.93994 17.9235 5.93994 19.63C5.93994 21.3366 7.32338 22.72 9.02994 22.72Z"
+                fill="#1B3350"
+              />
+              <path
+                d="M77.75 6.55C77.75 4.18 75.82 2.25 73.45 2.25H17.96V52.92H73.45C75.82 52.92 77.75 50.99 77.75 48.62V47.01H72.5V45.01H77.75V39.34H72.5V37.34H77.75V31.67H72.5V29.67H77.75V24H72.5V22H77.75V16.33H72.5V14.33H77.75V8.66H72.5V6.66H77.75V6.55ZM7.05 2.25C4.68 2.25 2.75 4.18 2.75 6.55V41.07H15.96V2.25H7.05ZM0.75 6.55C0.75 3.08 3.57 0.25 7.05 0.25H73.45C76.93 0.25 79.75 3.08 79.75 6.55V48.62C79.75 52.09 76.93 54.92 73.45 54.92H7.05C3.57 54.92 0.75 52.09 0.75 48.62V6.55ZM2.75 48.62C2.75 50.99 4.68 52.92 7.05 52.92H15.96V43.07H2.75V48.62Z"
+                fill="#1B3350"
+              />
+              <path
+                d="M43.46 39.68L32.13 26.9L22.5 37.76L21 36.44L32.13 23.88L43.46 36.67L65.96 11.29L67.46 12.62L43.46 39.68Z"
+                fill="#1B3350"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_65_5642">
+                <rect
+                  width="79.5"
+                  height="55.17"
+                  fill="white"
+                  transform="translate(0.5)"
+                />
+              </clipPath>
+            </defs>
+          </svg>
+
+          <h3>Seuranta</h3>
+          <span>7/8</span>
+        </header>
+        <blockquote>
+          <div>
+            <svg
+              width="39"
+              height="26"
+              viewBox="0 0 39 26"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_65_5074)">
+                <path
+                  d="M16.7645 20.0126C16.7645 24.0091 14.0884 26 8.73631 26C5.88185 26 3.80047 25.4354 2.47731 24.2914C1.15415 23.1474 0.5 21.2606 0.5 18.616C0.5 15.6891 1.48122 12.5691 3.44366 9.256C5.4061 5.95771 7.81455 2.97143 10.669 0.341714C11.3083 0.490286 11.9773 0.549714 12.6463 0.549714C13.3153 0.549714 14.0141 0.52 14.7277 0.445714C12.9437 2.73371 11.457 4.992 10.2825 7.23543C9.10798 9.47886 8.30516 11.752 7.87402 14.0251C10.9366 13.9509 13.1964 14.4114 14.6236 15.4217C16.0509 16.4171 16.7645 17.9474 16.7645 20.0274V20.0126ZM38.5 19.6857C38.5 23.6823 35.8239 25.6731 30.4718 25.6731C27.6174 25.6731 25.536 25.1086 24.2128 23.9646C22.8897 22.8206 22.2355 20.9337 22.2355 18.2891C22.2355 15.3623 23.2167 12.2423 25.1792 8.92914C27.1416 5.616 29.5501 2.62971 32.4045 0C33.0438 0.148571 33.7128 0.208 34.3819 0.208C35.0509 0.208 35.7496 0.178286 36.4632 0.104C34.6792 2.392 33.1925 4.65029 32.018 6.89372C30.8435 9.13714 30.0407 11.4103 29.6095 13.6834C32.6721 13.6091 34.9319 14.0697 36.3592 15.08C37.7864 16.0754 38.5 17.6057 38.5 19.6857Z"
+                  fill="#0074B0"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_65_5074">
+                  <rect
+                    width="38"
+                    height="26"
+                    fill="white"
+                    transform="translate(0.5)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+            <div class="vertical-line"></div>
+          </div>
+          <div>
+            <p>Mikään ei palaudu ennalleen, mutta sen kanssa pystyy elämään.</p>
+            <p>
+              Kaikki muuttuu. On aika ennen ja jälkeen syövän, mutta jälkeenkin
+              voi elää hyvää ja täyttä elämää.
+            </p>
+          </div>
+        </blockquote>
+        <p>
+          Rintasyövän sairastaneita seurataan tarkasti vielä paranemisen
+          jälkeenkin. Seurannoissa varmistetaan toipuminen hoidoista,
+          huolehditaan mahdollisista hormonaalisista hoidoista sekä pyritään
+          toteamaan mahdollinen syövän paikallinen uusiutuminen, jotta hoidot
+          päästään aloittamaan nopeasti. 
+        </p>
+        <p>
+          Yleensä rintasyövän sairastanut käy vuosittain seurantakäynneillä joko
+          terveyskeskuksessa tai sairaalassa. Seurantakäynneillä voidaan tehdä
+          kuvantamisutkimuksia, tunnustellaan rinnat ja niitä ympäröivät alueet
+          sekä kartoitetaan mahdollinen muu tuen tai kuntoutuksen tarve. Syövän
+          sairastaminen on fyysisesti ja henkisesti raskasta, usein henkisen
+          taakan läpikäynti alkaa vasta vuosienkin päästä. Myös tällöin voit
+          hakea tukea vertaistukiryhmistä. On tärkeää, että pyydät tukea silloin
+          kun tuntuu, että tarvitset sitä.
+        </p>
+      </div>
+      <!-- 8 -->
+      <div id="hoidot-ohi" class="Box">
+        <header>
+          <svg
+            width="82"
+            height="81"
+            viewBox="0 0 82 81"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_326_500)">
+              <path d="M81 40.5H65.49V42.5H81V40.5Z" fill="#1B3350" />
+              <path
+                d="M75.681 20.4069L62.2531 28.1689L63.254 29.9005L76.682 22.1384L75.681 20.4069Z"
+                fill="#1B3350"
+              />
+              <path
+                d="M75.57 60.54L74.57 62.27L61.13 54.52L62.13 52.79L75.57 60.54Z"
+                fill="#1B3350"
+              />
+              <path
+                d="M62.78 6.67969L55.03 20.1197L53.29 19.1197L61.05 5.67969L62.78 6.67969Z"
+                fill="#1B3350"
+              />
+              <path
+                d="M53.084 61.7571L51.3518 62.7568L59.1045 76.1902L60.8367 75.1905L53.084 61.7571Z"
+                fill="#1B3350"
+              />
+              <path
+                d="M40.88 19.8398C52.2 19.8398 61.41 29.0498 61.41 40.3698C61.41 51.6898 52.2 60.9098 40.88 60.9098C29.56 60.9098 20.34 51.6898 20.34 40.3698C20.34 29.0498 29.56 19.8398 40.88 19.8398ZM59.41 40.3698C59.41 30.1498 51.1 21.8398 40.88 21.8398C30.66 21.8398 22.34 30.1498 22.34 40.3698C22.34 50.5898 30.66 58.9098 40.88 58.9098C51.1 58.9098 59.41 50.5898 59.41 40.3698Z"
+                fill="#1B3350"
+              />
+              <path
+                d="M40.88 21.8398C51.1 21.8398 59.41 30.1498 59.41 40.3698C59.41 50.5898 51.1 58.9098 40.88 58.9098C30.66 58.9098 22.34 50.5898 22.34 40.3698C22.34 30.1498 30.66 21.8398 40.88 21.8398Z"
+                fill="#FFE682"
+              />
+              <path d="M43 0.25H41V15.76H43V0.25Z" fill="#1B3350" />
+              <path
+                d="M40.75 64.9902H38.75V80.5002H40.75V64.9902Z"
+                fill="#1B3350"
+              />
+              <path
+                d="M22.66 4.55957L30.41 17.9896L28.68 18.9896L20.92 5.55957L22.66 4.55957Z"
+                fill="#1B3350"
+              />
+              <path
+                d="M26.73 60.6418L18.9773 74.0752L20.7095 75.0749L28.4622 61.6415L26.73 60.6418Z"
+                fill="#1B3350"
+              />
+              <path
+                d="M20.6199 26.2197L19.6199 27.9597L6.18994 20.1997L7.18994 18.4697L20.6199 26.2197Z"
+                fill="#1B3350"
+              />
+              <path
+                d="M18.4999 50.8398L19.4999 52.5698L6.06995 60.3298L5.06995 58.5898L18.4999 50.8398Z"
+                fill="#1B3350"
+              />
+              <path d="M16.26 38.25H0.75V40.25H16.26V38.25Z" fill="#1B3350" />
+            </g>
+            <defs>
+              <clipPath id="clip0_326_500">
+                <rect
+                  width="80.75"
+                  height="80.75"
+                  fill="white"
+                  transform="translate(0.5)"
+                />
+              </clipPath>
+            </defs>
+          </svg>
+
+          <h3>Hoidot ohi - mitä nyt?</h3>
+          <span>8/8</span>
+        </header>
+        <blockquote>
+          <div>
+            <svg
+              width="39"
+              height="26"
+              viewBox="0 0 39 26"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_65_5074)">
+                <path
+                  d="M16.7645 20.0126C16.7645 24.0091 14.0884 26 8.73631 26C5.88185 26 3.80047 25.4354 2.47731 24.2914C1.15415 23.1474 0.5 21.2606 0.5 18.616C0.5 15.6891 1.48122 12.5691 3.44366 9.256C5.4061 5.95771 7.81455 2.97143 10.669 0.341714C11.3083 0.490286 11.9773 0.549714 12.6463 0.549714C13.3153 0.549714 14.0141 0.52 14.7277 0.445714C12.9437 2.73371 11.457 4.992 10.2825 7.23543C9.10798 9.47886 8.30516 11.752 7.87402 14.0251C10.9366 13.9509 13.1964 14.4114 14.6236 15.4217C16.0509 16.4171 16.7645 17.9474 16.7645 20.0274V20.0126ZM38.5 19.6857C38.5 23.6823 35.8239 25.6731 30.4718 25.6731C27.6174 25.6731 25.536 25.1086 24.2128 23.9646C22.8897 22.8206 22.2355 20.9337 22.2355 18.2891C22.2355 15.3623 23.2167 12.2423 25.1792 8.92914C27.1416 5.616 29.5501 2.62971 32.4045 0C33.0438 0.148571 33.7128 0.208 34.3819 0.208C35.0509 0.208 35.7496 0.178286 36.4632 0.104C34.6792 2.392 33.1925 4.65029 32.018 6.89372C30.8435 9.13714 30.0407 11.4103 29.6095 13.6834C32.6721 13.6091 34.9319 14.0697 36.3592 15.08C37.7864 16.0754 38.5 17.6057 38.5 19.6857Z"
+                  fill="#0074B0"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_65_5074">
+                  <rect
+                    width="38"
+                    height="26"
+                    fill="white"
+                    transform="translate(0.5)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+            <div class="vertical-line"></div>
+          </div>
+          <div>
+            <p>Hoitojen jälkeen putosin tyhjän päälle: tässäkö tämä oli?</p>
+            <p>
+              Minua kehotettiin jatkamaan elämää, mutta ei se elämä jatku siitä
+              mihin se jäi. On elämä ennen ja jälkeen syövän.
+            </p>
+          </div>
+        </blockquote>
+        <p>
+          Hoitojen loppuminen on hieno asia, mutta voi hieman yllättäenkin
+          tuntua turvattomalta ja jopa hylätyltä. Tässä vaiheessa  on voi
+          käynnistyä uusi kriisi. Et olekaan enää jatkuvien tutkimuksien
+          kohteena, säännöllinen yhteydenpito terveydenhuoltoon loppuu ja nyt on
+          myös enemmän aikaa keskittyä siihen mitä olette käyneet läpi
+          viimeisten kuukausien aikana. Sinua voi myös mietityttää ovatko
+          lääkärit varmoja, että syöpä on nyt hoidettu. Syöpädiagnoosi ja
+          hoitojen läpikäyminen usein muuttaa identiteettiä ja voit kokea, ettet
+          ole enää sama ihminen kuin ennen diagnoosia. Tässäkin vaiheeseen on
+          tarjolla monenlaista tukea; arkeen paluuseen, elämäntapoihin, kriisin
+          läpikäymiseen, kuntoutusta.
+        </p>
+      </div>
+      <h2 style="margin-top: 60px">Muu sisältö</h2>
+      <div class="MuuSisältö">
+        <h4 id="tiedonjano">Tiedonjano</h4>
+        <blockquote>
+          <div>
+            <svg
+              width="39"
+              height="26"
+              viewBox="0 0 39 26"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_65_5074)">
+                <path
+                  d="M16.7645 20.0126C16.7645 24.0091 14.0884 26 8.73631 26C5.88185 26 3.80047 25.4354 2.47731 24.2914C1.15415 23.1474 0.5 21.2606 0.5 18.616C0.5 15.6891 1.48122 12.5691 3.44366 9.256C5.4061 5.95771 7.81455 2.97143 10.669 0.341714C11.3083 0.490286 11.9773 0.549714 12.6463 0.549714C13.3153 0.549714 14.0141 0.52 14.7277 0.445714C12.9437 2.73371 11.457 4.992 10.2825 7.23543C9.10798 9.47886 8.30516 11.752 7.87402 14.0251C10.9366 13.9509 13.1964 14.4114 14.6236 15.4217C16.0509 16.4171 16.7645 17.9474 16.7645 20.0274V20.0126ZM38.5 19.6857C38.5 23.6823 35.8239 25.6731 30.4718 25.6731C27.6174 25.6731 25.536 25.1086 24.2128 23.9646C22.8897 22.8206 22.2355 20.9337 22.2355 18.2891C22.2355 15.3623 23.2167 12.2423 25.1792 8.92914C27.1416 5.616 29.5501 2.62971 32.4045 0C33.0438 0.148571 33.7128 0.208 34.3819 0.208C35.0509 0.208 35.7496 0.178286 36.4632 0.104C34.6792 2.392 33.1925 4.65029 32.018 6.89372C30.8435 9.13714 30.0407 11.4103 29.6095 13.6834C32.6721 13.6091 34.9319 14.0697 36.3592 15.08C37.7864 16.0754 38.5 17.6057 38.5 19.6857Z"
+                  fill="#0074B0"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_65_5074">
+                  <rect
+                    width="38"
+                    height="26"
+                    fill="white"
+                    transform="translate(0.5)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+            <div class="vertical-line"></div>
+          </div>
+          <div>
+            <p>
+              Syöpikseen ei saa yhteyttä. Mistä saa kunnon tietoa riittävästi.
+            </p>
+            <p>
+              Tiedonhalu oli kaikista suurin kuukauden päästä diagnoosista niin
+              sairastuneelle kuin omaiselle.
+            </p>
+            <p>Etsimällä tietoa googlesta nousee vain enemmän kysymyksiä.</p>
+            <p>
+              Kun luin diagnoosin itse, siellä oli asioita, joista ei oltu
+              puhuttu.
+            </p>
+            <p>
+              Tieto on tärkeää, mutta se voi olla myös haitallista (väärään
+              aikaan).
+            </p>
+            <p>
+              Ihmiset ovat erilaisia, jotkut haluavat kaiken nippelitiedon,
+              toiset luottavat järjestelmään.
+            </p>
+          </div>
+        </blockquote>
+        <p>
+          Saat paljon tietoa terveydenhuollon ammattilaisilta. Tämän lisäksi
+          monet hakevat tietoa eri lähteistä. Joskus tieto ja sen määrä voi myös
+          ahdistaa, ja voi olla vaikea arvioida mihin tietoon voi luottaa ja
+          mikä pätee juuri minun kohdallani. Syövän hoito kehittää nopealla
+          vauhdilla, tietoa tulee jatkuvasti lisää, minkä vuoksi on tärkeää
+          katsoa kirjoituksen julkaisupäivämäärä. Joskus luotettavankin lähteen
+          tieto voi olla vanhentunutta. 
+        </p>
+        <p>
+          Usein tietoa sairaudesta ja hoidoista on paljon tarjolla, mutta
+          inhimillisestä puolesta,  kokemuksista ja tunteista, joita voi tulla
+          sairauden eri vaiheissa eteen ei ole niinkään saataville. Vertaistuki,
+          keskustelu muiden saman asian läpikäyneiden kanssa voi helpottaa. 
+        </p>
+        <h4>Luotettavia tietolähteitä</h4>
+        <a
+          class="BoxLink"
+          href="https://www.kaikkisyovasta.fi/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><svg
+            width="26"
+            height="16"
+            viewBox="0 0 26 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M25.2071 8.70711C25.5976 8.31658 25.5976 7.68342 25.2071 7.29289L18.8431 0.928932C18.4526 0.538408 17.8195 0.538408 17.4289 0.928932C17.0384 1.31946 17.0384 1.95262 17.4289 2.34315L23.0858 8L17.4289 13.6569C17.0384 14.0474 17.0384 14.6805 17.4289 15.0711C17.8195 15.4616 18.4526 15.4616 18.8431 15.0711L25.2071 8.70711ZM0.5 9H24.5V7H0.5V9Z"
+              fill="#0074B0"
+            />
+          </svg>
+          kaikkisyovasta.fi
+        </a>
+        <a
+          class="BoxLink"
+          href="https://www.terveyskyla.fi/syopatalo/syopataudit/rintasyopa"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg
+            width="26"
+            height="16"
+            viewBox="0 0 26 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M25.2071 8.70711C25.5976 8.31658 25.5976 7.68342 25.2071 7.29289L18.8431 0.928932C18.4526 0.538408 17.8195 0.538408 17.4289 0.928932C17.0384 1.31946 17.0384 1.95262 17.4289 2.34315L23.0858 8L17.4289 13.6569C17.0384 14.0474 17.0384 14.6805 17.4289 15.0711C17.8195 15.4616 18.4526 15.4616 18.8431 15.0711L25.2071 8.70711ZM0.5 9H24.5V7H0.5V9Z"
+              fill="#0074B0"
+            />
+          </svg>
+          Terveyskylä
+        </a>
+        <h4 id="miten-kertoa-läheiselle">Miten kerron läheisille?</h4>
+        <blockquote>
+          <div>
+            <svg
+              width="39"
+              height="26"
+              viewBox="0 0 39 26"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_65_5074)">
+                <path
+                  d="M16.7645 20.0126C16.7645 24.0091 14.0884 26 8.73631 26C5.88185 26 3.80047 25.4354 2.47731 24.2914C1.15415 23.1474 0.5 21.2606 0.5 18.616C0.5 15.6891 1.48122 12.5691 3.44366 9.256C5.4061 5.95771 7.81455 2.97143 10.669 0.341714C11.3083 0.490286 11.9773 0.549714 12.6463 0.549714C13.3153 0.549714 14.0141 0.52 14.7277 0.445714C12.9437 2.73371 11.457 4.992 10.2825 7.23543C9.10798 9.47886 8.30516 11.752 7.87402 14.0251C10.9366 13.9509 13.1964 14.4114 14.6236 15.4217C16.0509 16.4171 16.7645 17.9474 16.7645 20.0274V20.0126ZM38.5 19.6857C38.5 23.6823 35.8239 25.6731 30.4718 25.6731C27.6174 25.6731 25.536 25.1086 24.2128 23.9646C22.8897 22.8206 22.2355 20.9337 22.2355 18.2891C22.2355 15.3623 23.2167 12.2423 25.1792 8.92914C27.1416 5.616 29.5501 2.62971 32.4045 0C33.0438 0.148571 33.7128 0.208 34.3819 0.208C35.0509 0.208 35.7496 0.178286 36.4632 0.104C34.6792 2.392 33.1925 4.65029 32.018 6.89372C30.8435 9.13714 30.0407 11.4103 29.6095 13.6834C32.6721 13.6091 34.9319 14.0697 36.3592 15.08C37.7864 16.0754 38.5 17.6057 38.5 19.6857Z"
+                  fill="#0074B0"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_65_5074">
+                  <rect
+                    width="38"
+                    height="26"
+                    fill="white"
+                    transform="translate(0.5)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+            <div class="vertical-line"></div>
+          </div>
+          <div>
+            <p>Minua pelotti kertoa lapsille, vanhemmille ja työkavereille.</p>
+            <p>Neuvontahoitajalta sain hyvää neuvoa miten kertoa omaisille.</p>
+            <p>
+              En halunnut, että lapset kuulee asioita sairaudesta, joista puhuu
+              aikuisten kanssa.
+            </p>
+            <p>Omaisena olisin myös tarvinnut tukea.</p>
+            <p>
+              Syöpäpotilas saa puhelinnumeroita, joihin voi soittaa, jos tulee
+              joku huoli, mutta puolisona olisin myös tarvinnut tukea.
+            </p>
+          </div>
+        </blockquote>
+        <h4 id="psyykkinen-tuki">Psyykkinen tuki</h4>
+        <blockquote>
+          <div>
+            <svg
+              width="39"
+              height="26"
+              viewBox="0 0 39 26"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_65_5074)">
+                <path
+                  d="M16.7645 20.0126C16.7645 24.0091 14.0884 26 8.73631 26C5.88185 26 3.80047 25.4354 2.47731 24.2914C1.15415 23.1474 0.5 21.2606 0.5 18.616C0.5 15.6891 1.48122 12.5691 3.44366 9.256C5.4061 5.95771 7.81455 2.97143 10.669 0.341714C11.3083 0.490286 11.9773 0.549714 12.6463 0.549714C13.3153 0.549714 14.0141 0.52 14.7277 0.445714C12.9437 2.73371 11.457 4.992 10.2825 7.23543C9.10798 9.47886 8.30516 11.752 7.87402 14.0251C10.9366 13.9509 13.1964 14.4114 14.6236 15.4217C16.0509 16.4171 16.7645 17.9474 16.7645 20.0274V20.0126ZM38.5 19.6857C38.5 23.6823 35.8239 25.6731 30.4718 25.6731C27.6174 25.6731 25.536 25.1086 24.2128 23.9646C22.8897 22.8206 22.2355 20.9337 22.2355 18.2891C22.2355 15.3623 23.2167 12.2423 25.1792 8.92914C27.1416 5.616 29.5501 2.62971 32.4045 0C33.0438 0.148571 33.7128 0.208 34.3819 0.208C35.0509 0.208 35.7496 0.178286 36.4632 0.104C34.6792 2.392 33.1925 4.65029 32.018 6.89372C30.8435 9.13714 30.0407 11.4103 29.6095 13.6834C32.6721 13.6091 34.9319 14.0697 36.3592 15.08C37.7864 16.0754 38.5 17.6057 38.5 19.6857Z"
+                  fill="#0074B0"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_65_5074">
+                  <rect
+                    width="38"
+                    height="26"
+                    fill="white"
+                    transform="translate(0.5)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+            <div class="vertical-line"></div>
+          </div>
+          <div>
+            <p>
+              Psyykkinen olotila oli kaikista pahin. Alun epätietoisuus. Kukaan
+              ei kysynyt haluanko mielenterveystukea.
+            </p>
+            <p>Mielenrauhan saaminen on tärkeä.</p>
+            <p>
+              Arkuutta keskustelun aloittamiseksi, esim. seksuaalisuus ja
+              kuolema.
+            </p>
+            <p>Mielenrauhaa piti käydä ostamassa yksityisiltä.</p>
+            <p>Kuolemanpelko.</p>
+            <p>
+              Viikoittainen videopuhelu psykoterapeutin kanssa oli iso tuki.
+            </p>
+          </div>
+        </blockquote>
+        <h4 id="vertaistuki">Vertaistuki</h4>
+        <blockquote>
+          <div>
+            <svg
+              width="39"
+              height="26"
+              viewBox="0 0 39 26"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_65_5074)">
+                <path
+                  d="M16.7645 20.0126C16.7645 24.0091 14.0884 26 8.73631 26C5.88185 26 3.80047 25.4354 2.47731 24.2914C1.15415 23.1474 0.5 21.2606 0.5 18.616C0.5 15.6891 1.48122 12.5691 3.44366 9.256C5.4061 5.95771 7.81455 2.97143 10.669 0.341714C11.3083 0.490286 11.9773 0.549714 12.6463 0.549714C13.3153 0.549714 14.0141 0.52 14.7277 0.445714C12.9437 2.73371 11.457 4.992 10.2825 7.23543C9.10798 9.47886 8.30516 11.752 7.87402 14.0251C10.9366 13.9509 13.1964 14.4114 14.6236 15.4217C16.0509 16.4171 16.7645 17.9474 16.7645 20.0274V20.0126ZM38.5 19.6857C38.5 23.6823 35.8239 25.6731 30.4718 25.6731C27.6174 25.6731 25.536 25.1086 24.2128 23.9646C22.8897 22.8206 22.2355 20.9337 22.2355 18.2891C22.2355 15.3623 23.2167 12.2423 25.1792 8.92914C27.1416 5.616 29.5501 2.62971 32.4045 0C33.0438 0.148571 33.7128 0.208 34.3819 0.208C35.0509 0.208 35.7496 0.178286 36.4632 0.104C34.6792 2.392 33.1925 4.65029 32.018 6.89372C30.8435 9.13714 30.0407 11.4103 29.6095 13.6834C32.6721 13.6091 34.9319 14.0697 36.3592 15.08C37.7864 16.0754 38.5 17.6057 38.5 19.6857Z"
+                  fill="#0074B0"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_65_5074">
+                  <rect
+                    width="38"
+                    height="26"
+                    fill="white"
+                    transform="translate(0.5)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+            <div class="vertical-line"></div>
+          </div>
+          <div>
+            <p>Vain toinen saman läpikäynyt voi ymmärtää mitä käyt läpi.</p>
+            <p>
+              Eri ihmisillä on erilainen tahtotila ja valmiudet käyttää
+              sosiaalisia palveluita vertaisten löytämiseen.
+            </p>
+          </div>
+        </blockquote>
+        <p>
+          Jos haluat keskustella tilanteestasi tai läheisesi tilanteesta
+          tukihenkilön tai jonkun sellaisen kanssa, joka on kokenut saman, ole
+          yhteydessä vertaisiin tai hae ammattilaisen apua.
+        </p>
+        <a
+          class="BoxLink"
+          href="https://www.europadonna.fi/rintasyopa/hoitopolku/leikkaus/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg
+            width="26"
+            height="16"
+            viewBox="0 0 26 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M25.2071 8.70711C25.5976 8.31658 25.5976 7.68342 25.2071 7.29289L18.8431 0.928932C18.4526 0.538408 17.8195 0.538408 17.4289 0.928932C17.0384 1.31946 17.0384 1.95262 17.4289 2.34315L23.0858 8L17.4289 13.6569C17.0384 14.0474 17.0384 14.6805 17.4289 15.0711C17.8195 15.4616 18.4526 15.4616 18.8431 15.0711L25.2071 8.70711ZM0.5 9H24.5V7H0.5V9Z"
+              fill="#0074B0"
+            />
+          </svg>
+          Leikkaushoito
+        </a>
+        <a
+          class="BoxLink"
+          href="https://www.europadonna.fi/rintasyopa/hoitopolku/sytostaattihoidot/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><svg
+            width="26"
+            height="16"
+            viewBox="0 0 26 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M25.2071 8.70711C25.5976 8.31658 25.5976 7.68342 25.2071 7.29289L18.8431 0.928932C18.4526 0.538408 17.8195 0.538408 17.4289 0.928932C17.0384 1.31946 17.0384 1.95262 17.4289 2.34315L23.0858 8L17.4289 13.6569C17.0384 14.0474 17.0384 14.6805 17.4289 15.0711C17.8195 15.4616 18.4526 15.4616 18.8431 15.0711L25.2071 8.70711ZM0.5 9H24.5V7H0.5V9Z"
+              fill="#0074B0"
+            />
+          </svg>
+          Lääkehoito
+        </a>
+        <a class="BoxLink" href="" target="_blank" rel="noopener noreferrer"
+          ><svg
+            width="26"
+            height="16"
+            viewBox="0 0 26 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M25.2071 8.70711C25.5976 8.31658 25.5976 7.68342 25.2071 7.29289L18.8431 0.928932C18.4526 0.538408 17.8195 0.538408 17.4289 0.928932C17.0384 1.31946 17.0384 1.95262 17.4289 2.34315L23.0858 8L17.4289 13.6569C17.0384 14.0474 17.0384 14.6805 17.4289 15.0711C17.8195 15.4616 18.4526 15.4616 18.8431 15.0711L25.2071 8.70711ZM0.5 9H24.5V7H0.5V9Z"
+              fill="#0074B0"
+            />
+          </svg>
+          X Vertaistuki
+        </a>
+      </div>
+    </article>
+  </body>
+</html>
